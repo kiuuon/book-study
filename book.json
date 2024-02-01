@@ -1,0 +1,13 @@
+{
+  "plugins": [
+    "hide-published-with",
+    "collapsible-chapters",
+    "intopic-toc",
+    "bootstrap-callout"
+  ],
+  "pluginsConfig": {
+    "intopic-toc": {
+      "label": "목차"
+    }
+  }
+}
