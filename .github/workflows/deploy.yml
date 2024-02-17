@@ -20,6 +20,11 @@ jobs:
       - name: Install GitBook CLI
         run: npm install gitbook-cli -g
 
+      - name: Update graceful-fs
+        run: |
+          cd /opt/hostedtoolcache/node/16.20.2/x64/lib/node_modules/gitbook-cli/node_modules/npm/node_modules/graceful-fs
+          npm install graceful-fs@4.2.0 --save
+
       - name: Install Plugins and Build Book
         run: |
           gitbook install
