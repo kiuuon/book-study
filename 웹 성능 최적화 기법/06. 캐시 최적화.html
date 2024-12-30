@@ -659,6 +659,414 @@
                                 <section class="normal markdown-section">
                                 
                                 <h1 id="06-&#xCE90;&#xC2DC;-&#xCD5C;&#xC801;&#xD654;">06. &#xCE90;&#xC2DC; &#xCD5C;&#xC801;&#xD654;</h1>
+<h1 id="&#x1F4DD;-contents">&#x1F4DD; Contents</h1>
+<h3 id="&#xCE90;&#xC2DC;">&#xCE90;&#xC2DC;</h3>
+<ul>
+<li>&#xCF58;&#xD150;&#xCE20; &#xC694;&#xCCAD;&#xC5D0; &#xBE60;&#xB974;&#xAC8C; &#xC751;&#xB2F5;&#xD558;&#xAE30; &#xC704;&#xD574; &#xC11C;&#xBC84;&#xC640; &#xD074;&#xB77C;&#xC774;&#xC5B8;&#xD2B8; &#xC0AC;&#xC774;&#xC5D0;&#xC11C; &#xC751;&#xB2F5; &#xCF58;&#xD150;&#xCE20;&#xC758; &#xC0AC;&#xBCF8;&#xC744; &#xC800;&#xC7A5;&#xD558;&#xB294; &#xACF5;&#xAC04;&#xC744; &#xCE90;&#xC2DC;&#xB77C;&#xACE0; &#xD568;</li>
+<li>&#xC774; &#xCE90;&#xC2DC;&#xB97C; &#xC720;&#xC9C0;&#xD558;&#xACE0; &#xCC98;&#xB9AC;&#xD574;&#xC8FC;&#xB294; &#xBCC4;&#xB3C4;&#xC758; &#xC11C;&#xBC84;&#xB97C; &#xCE90;&#xC2DC; &#xC11C;&#xBC84;&#xB77C;&#xACE0; &#xD568;</li>
+<li>&#xCE90;&#xC2DC;&#xB294; &#xBCF4;&#xD1B5; &#xD074;&#xB77C;&#xC774;&#xC5B8;&#xD2B8;&#xC640; &#xC11C;&#xBC84; &#xC0AC;&#xC774;&#xC5D0; &#xC874;&#xC7AC;&#xD568;</li>
+<li>&#xCE90;&#xC2DC;&#xC758; &#xC885;&#xB958;&#xC5D0;&#xB294; &#xBE0C;&#xB77C;&#xC6B0;&#xC800; &#xCE90;&#xC2DC;, &#xD504;&#xB85D;&#xC2DC; &#xCE90;&#xC2DC;, &#xD2B8;&#xB79C;&#xC2A4;&#xD328;&#xC5B4;&#xB7F0;&#xD2B8; &#xCE90;&#xC2DC;, &#xB9AC;&#xBC84;&#xC2A4; &#xD504;&#xB85D;&#xC2DC; &#xCE90;&#xC2DC;&#xAC00; &#xC788;&#xC74C;</li>
+<li>&#xC774; &#xC808;&#xC5D0;&#xC11C; &#xC8FC;&#xB85C; &#xC124;&#xBA85;&#xD560; &#xCE90;&#xC2DC; &#xC11C;&#xBC84;&#xB294; &#xC6F9; &#xCE90;&#xC2DC;&#xB77C; &#xBD88;&#xB9AC;&#xB294; &#xB9AC;&#xBC84;&#xC2A4; &#xD504;&#xB85D;&#xC2DC; &#xCE90;&#xC2DC;&#xC784;</li>
+<li>&#xC6F9; &#xC11C;&#xBC84;&#xC778; Apache HTTP server&#xC5D0;&#xC11C; &#xBAA8;&#xB4C8;&#xB4E4;&#xC744; &#xC0AC;&#xC6A9;&#xD574; &#xCE90;&#xC2DC; &#xC11C;&#xBC84;&#xB85C; &#xD65C;&#xC6A9;&#xD560; &#xC218; &#xC788;&#xACE0;, Nginx&#xC5D0;&#xB3C4; &#xCF58;&#xD150;&#xCE20; &#xCE90;&#xC2DC; &#xAE30;&#xB2A5;&#xC744; &#xC81C;&#xACF5;&#xD568;</li>
+<li>&#xC774; &#xC678;&#xC5D0;&#xB3C4; &#xC624;&#xD508; &#xC18C;&#xC2A4; &#xC6F9; &#xCE90;&#xC2DC; &#xC11C;&#xBC84;&#xB4E4;&#xC774; &#xC788;&#xC74C;<ul>
+<li>Apache Traffic Server</li>
+<li>Nginx(&#xCE90;&#xC2DC; &#xAE30;&#xB2A5;&#xC744; &#xC81C;&#xACF5;&#xD558;&#xB294; &#xC6F9; &#xC11C;&#xBC84;)</li>
+<li>Varnish Cache</li>
+</ul>
+</li>
+</ul>
+<h3 id="&#xC6F9;-&#xCE90;&#xC2DC;-&#xB3D9;&#xC791;-&#xC6D0;&#xB9AC;">&#xC6F9; &#xCE90;&#xC2DC; &#xB3D9;&#xC791; &#xC6D0;&#xB9AC;</h3>
+<ul>
+<li>&#xCE90;&#xC2DC; &#xC11C;&#xBC84;&#xB294; HTTP/1.1 &#xADDC;&#xACA9;(RFC2616)&#xC744; &#xAE30;&#xBC18;&#xC73C;&#xB85C; &#xB3D9;&#xC791;&#xD558;&#xBBC0;&#xB85C; HTTP&#xC5D0; &#xB300;&#xD55C; &#xAE30;&#xBCF8; &#xC9C0;&#xC2DD;&#xC744; &#xBA3C;&#xC800; &#xC774;&#xD574;&#xD574;&#xC57C; &#xD568;</li>
+</ul>
+<h4 id="http">HTTP</h4>
+<ul>
+<li>&#xC778;&#xD130;&#xB137;&#xC5D0;&#xC11C; &#xB370;&#xC774;&#xD130;&#xB97C; &#xC8FC;&#xACE0;&#xBC1B;&#xAE30; &#xC704;&#xD55C; &#xD074;&#xB77C;&#xC774;&#xC5B8;&#xD2B8;/&#xC11C;&#xBC84; &#xBAA8;&#xB378;&#xC744; &#xB530;&#xB974;&#xB294; &#xD504;&#xB85C;&#xD1A0;&#xCF5C;</li>
+<li>OSI 7&#xACC4;&#xCE35; &#xBAA8;&#xB378;&#xC758; &#xB9C8;&#xC9C0;&#xB9C9; 7&#xACC4;&#xCE35;&#xC778; Application &#xB808;&#xBCA8;&#xC758; &#xD504;&#xB85C;&#xD1A0;&#xCF5C;&#xC774;&#xBA70; TCP/IP &#xC704;&#xC5D0;&#xC11C; &#xB3D9;&#xC791;&#xD568;</li>
+<li>&#xC77C;&#xB2E8; TCP Connection&#xC774; &#xB9FA;&#xC5B4;&#xC9C0;&#xBA74; HTTP&#xB294; &#xC5B4;&#xB5A4; &#xC885;&#xB958;&#xC758; &#xB370;&#xC774;&#xD130;&#xB4E0; &#xC804;&#xC1A1;&#xD560; &#xC218; &#xC788;&#xB3C4;&#xB85D; &#xC124;&#xACC4;&#xB428;</li>
+<li>HTTP &#xBA54;&#xC2DC;&#xC9C0;&#xB294; &#xD06C;&#xAC8C; &#xD5E4;&#xB354;&#xC640; &#xD398;&#xC774;&#xB85C;&#xB4DC;&#xB85C; &#xAD6C;&#xBD84;&#xB428;</li>
+<li>&#xD5E4;&#xB354;&#xC5D0;&#xB294; &#xBA54;&#xC2DC;&#xC9C0;&#xB97C; &#xC804;&#xC1A1;&#xD560; &#xD638;&#xC2A4;&#xD2B8;&#xBA85;, URL &#xD328;&#xC2A4; &#xB4F1; &#xBA54;&#xC2DC;&#xC9C0; &#xC804;&#xC1A1; &#xBC0F; &#xCC98;&#xB9AC;&#xC5D0; &#xD544;&#xC694;&#xD55C; &#xB370;&#xC774;&#xD130;&#xB4E4;&#xC774; &#xD3EC;&#xD568;&#xB418;&#xC5B4; &#xC788;&#xC74C;</li>
+<li>&#xD398;&#xC774;&#xB85C;&#xB4DC;&#xB294; html, &#xC774;&#xBBF8;&#xC9C0; &#xB4F1; &#xC11C;&#xBC84;&#xAC00; &#xC2E4;&#xC81C; &#xC804;&#xC1A1;&#xD558;&#xACE0;&#xC790; &#xD558;&#xB294; &#xB370;&#xC774;&#xD130;&#xB97C; &#xD3EC;&#xD568;&#xD568;</li>
+</ul>
+<h4 id="http&#xC758;-&#xCE90;&#xC2DC;-&#xC81C;&#xC5B4;-&#xBC29;&#xC2DD;">HTTP&#xC758; &#xCE90;&#xC2DC; &#xC81C;&#xC5B4; &#xBC29;&#xC2DD;</h4>
+<ul>
+<li>HTTP/1.0&#xAE4C;&#xC9C0;&#xB294; &#xCE90;&#xC2DC;&#xB97C; &#xC81C;&#xC5B4;&#xD558;&#xB294; &#xBA85;&#xC2DC;&#xC801;&#xC778; &#xAE30;&#xC220;&#xC774; &#xC5C6;&#xACE0;, &#xC6F9; &#xCF58;&#xD150;&#xCE20;&#xAC00; &#xC788;&#xB294; &#xC6D0;&#xBCF8; &#xC11C;&#xBC84; &#xC790;&#xC6D0;&#xB4E4;&#xC774; &#xC5B8;&#xC81C;&#xAE4C;&#xC9C0; &#xC720;&#xD6A8;&#xD55C;&#xC9C0; &#xADF8;&#xB9AC;&#xACE0; &#xB9CC;&#xB8CC;&#xC77C; &#xC774;&#xD6C4; &#xD574;&#xB2F9; &#xC790;&#xC6D0;&#xC774; &#xC2E4;&#xC81C; &#xBCC0;&#xACBD;&#xB418;&#xC5C8;&#xB294;&#xC9C0;&#xB97C; &#xD655;&#xC778;&#xD558;&#xB294; &#xC694;&#xCCAD;/&#xC751;&#xB2F5; &#xD5E4;&#xB354;&#xB97C; &#xC815;&#xC758;&#xD558;&#xACE0; &#xC774;&#xC5D0; &#xB300;&#xD574;&#xC11C;&#xB9CC; &#xAE30;&#xB85D;&#xD568;</li>
+<li>HTTP/1.1&#xBD80;&#xD130; &#xBA85;&#xC2DC;&#xC801;&#xC73C;&#xB85C; &#xCE90;&#xC2DC;&#xB97C; &#xC81C;&#xC5B4;&#xD560; &#xC218; &#xC788;&#xB294; Cache-Control &#xD5E4;&#xB354;&#xB97C; &#xCD94;&#xAC00;&#xD568;</li>
+<li>HTTP/1.1&#xC5D0;&#xC11C;&#xB294; &#xCE90;&#xC2DC;&#xB97C; &#xC81C;&#xC5B4;&#xD558;&#xB294; &#xBAA9;&#xC801;&#xC744; &#xD06C;&#xAC8C; &#xB450; &#xAC00;&#xC9C0;&#xB85C; &#xC815;&#xC758;&#xD568;<ul>
+<li>&#xC6D0;&#xBCF8; &#xC11C;&#xBC84;&#xB85C;&#xC758; &#xC694;&#xCCAD; &#xC218;&#xB97C; &#xCD5C;&#xC18C;&#xD654;&#xD569;&#xB2C8;&#xB2E4;. &#xC774;&#xB294; &#xB124;&#xD2B8;&#xC6CC;&#xD06C; &#xC655;&#xBCF5; &#xC218;&#xB97C; &#xC904;&#xC5EC; &#xACB0;&#xACFC;&#xC801;&#xC73C;&#xB85C; &#xC0AC;&#xC6A9;&#xC790; &#xC694;&#xCCAD;&#xC5D0; &#xB300;&#xD55C; &#xC751;&#xB2F5; &#xC18D;&#xB3C4;&#xB97C; &#xB2E8;&#xCD95;&#xD560; &#xC218; &#xC788;&#xC2B5;&#xB2C8;&#xB2E4;.</li>
+<li>&#xC644;&#xC804;&#xD55C; &#xCF58;&#xD150;&#xCE20;&#xB97C; &#xC751;&#xB2F5;&#xD558;&#xC9C0; &#xC54A;&#xC544;&#xB3C4; &#xB429;&#xB2C8;&#xB2E4;. &#xC774;&#xB294; &#xB124;&#xD2B8;&#xC6CC;&#xD06C; &#xB300;&#xC5ED;&#xD3ED;&#xACFC; &#xB9AC;&#xC18C;&#xC2A4; &#xB0AD;&#xBE44;&#xB97C; &#xC904;&#xC774;&#xACE0; &#xBE44;&#xC6A9;&#xC744; &#xD6A8;&#xC728;&#xD654;&#xD569;&#xB2C8;&#xB2E4;.</li>
+</ul>
+</li>
+</ul>
+<h5 id="expire">Expire</h5>
+<ul>
+<li>HTTP/1.0&#xC5D0;&#xC11C;&#xB294; Expire &#xD5E4;&#xB354;&#xB97C; &#xC0AC;&#xC6A9;&#xD574; &#xC6D0;&#xBCF8; &#xC11C;&#xBC84; &#xCF58;&#xD150;&#xCE20; &#xC720;&#xD6A8; &#xAE30;&#xAC04;&#xC744; &#xC9C0;&#xC815;&#xD558;&#xB3C4;&#xB85D; &#xC815;&#xC758;&#xD568;</li>
+<li>Expire &#xD5E4;&#xB354;&#xB294; &#xCE90;&#xC2DC;&#xB97C; &#xBA85;&#xC2DC;&#xC801;&#xC73C;&#xB85C; &#xC81C;&#xC5B4;&#xD558;&#xC9C0;&#xB294; &#xC54A;&#xC9C0;&#xB9CC; &#xBE0C;&#xB77C;&#xC6B0;&#xC800;&#xB97C; &#xD3EC;&#xD568;&#xD55C; &#xB300;&#xBD80;&#xBD84; &#xCE90;&#xC2DC; &#xC11C;&#xBC84;&#xC5D0;&#xC11C; &#xCF58;&#xD150;&#xCE20;&#xB97C; &#xC5B8;&#xC81C;&#xAE4C;&#xC9C0; &#xC800;&#xC7A5;&#xD560; &#xAC83;&#xC778;&#xC9C0; &#xD310;&#xB2E8;&#xD558;&#xAE30; &#xC704;&#xD574; &#xC0AC;&#xC6A9;&#xD568;</li>
+</ul>
+<h5 id="cache-control-max-age">Cache-Control: max-age</h5>
+<ul>
+<li>HTTP/1.1&#xC5D0;&#xC11C;&#xB294; Cache-Control: max-age&#xB77C;&#xB294; &#xD5E4;&#xB354;&#xB85C; &#xCF58;&#xD150;&#xCE20;&#xC758; &#xCE90;&#xC2DC; &#xC720;&#xC9C0; &#xC2DC;&#xAC04;&#xC744; &#xC815;&#xC758;&#xD568;</li>
+<li>Expire &#xD5E4;&#xB354;&#xB294; &#xB9CC;&#xB8CC; &#xC77C;&#xC790;&#xB97C; &#xC9C0;&#xC815;&#xD558;&#xB294; &#xBC18;&#xBA74; Cache-control: max-age&#xB294; &#xC720;&#xD6A8; &#xAE30;&#xAC04;&#xC744; &#xC9C0;&#xC815;&#xD568;</li>
+<li>&#xB450; &#xD5E4;&#xB354;&#xB294; &apos;&#xC6D0;&#xBCF8; &#xC11C;&#xBC84; &#xCF58;&#xD150;&#xCE20;&#xC758; &#xCE90;&#xC2DC; TTL&#xC744; &#xACB0;&#xC815;&apos;&#xD558;&#xB294; &#xB3D9;&#xC77C;&#xD55C; &#xC6A9;&#xB3C4;&#xB85C; &#xC0AC;&#xC6A9;&#xB428;</li>
+</ul>
+<h5 id="cache-control-s-maxage">Cache-Control: s-maxage</h5>
+<ul>
+<li>CDN&#xACFC; &#xAC19;&#xC740; &#xACF5;&#xC6A9; &#xCE90;&#xC2DC; &#xC8FC;&#xAE30;&#xB97C; &#xAD00;&#xB9AC;&#xD568;</li>
+<li>&#xC77C;&#xBC18;&#xC801;&#xC73C;&#xB85C; &#xB300;&#xBD80;&#xBD84; CDN &#xC5C5;&#xCCB4;&#xB294; &#xCE90;&#xC2DC; &#xC8FC;&#xAE30;&#xB97C; &#xC124;&#xC815;&#xD558;&#xACE0; &#xAD00;&#xB9AC;&#xD558;&#xB294; &#xBCC4;&#xB3C4; &#xBC29;&#xBC95;&#xC744; &#xC0AC;&#xC6A9;&#xD574;&#xC11C; &#xB2E4;&#xC218;&#xC758; CDN &#xCE90;&#xC2DC;&#xB97C; &#xB3D9;&#xC2DC;&#xC5D0; &#xC0AC;&#xC6A9;&#xD558;&#xBA74; &#xC774;&#xB4E4;&#xC744; &#xD1B5;&#xD569; &#xAD00;&#xB9AC;&#xD558;&#xAE30; &#xC27D;&#xC9C0; &#xC54A;&#xC74C;</li>
+<li>s-maxage&#xB97C; &#xC774;&#xC6A9;&#xD558;&#xBA74; &#xC0AC;&#xC6A9;&#xC911;&#xC778; &#xBAA8;&#xB4E0; CDN&#xC758; &#xCE90;&#xC2DC; &#xC8FC;&#xAE30;&#xB97C; &#xC77C;&#xAD04;&#xC801;&#xC73C;&#xB85C; &#xC124;&#xC815;&#xD558;&#xAC70;&#xB098; &#xBCC0;&#xACBD;&#xD560; &#xC218; &#xC788;&#xC74C;</li>
+<li>s-maxage&#xB294; &#xD45C;&#xC900;&#xC73C;&#xB85C; &#xB3C4;&#xC785;&#xB41C; &#xC9C0; &#xC5BC;&#xB9C8; &#xB418;&#xC9C0; &#xC54A;&#xC558;&#xC73C;&#xBBC0;&#xB85C; CDN&#xC5C5;&#xCCB4;&#xAC00; &#xC774; &#xD5E4;&#xB354;&#xB97C; &#xC9C0;&#xC6D0;&#xD558;&#xB294;&#xC9C0; &#xBA3C;&#xC800; &#xD655;&#xC778;&#xD574;&#xC57C; &#xD568;</li>
+</ul>
+<h5 id="etag">ETag</h5>
+<ul>
+<li>&#xC6D0;&#xBCF8; &#xC11C;&#xBC84;&#xAC00; &#xB9AC;&#xC18C;&#xC2A4;&#xB97C; &#xC2DD;&#xBCC4;&#xD558;&#xAE30; &#xC704;&#xD574; &#xBD80;&#xC5EC;&#xD558;&#xB294; &#xACE0;&#xC720; &#xBC88;&#xD638;</li>
+<li>&#xCE90;&#xC2DC; &#xC11C;&#xBC84;&#xC5D0;&#xC11C;&#xB294; ETag&#xB97C; &#xC0AC;&#xC6A9;&#xD574; &#xC6D0;&#xBCF8; &#xC11C;&#xBC84;&#xC758; &#xB9AC;&#xC18C;&#xC2A4;&#xAC00; &#xC2DC;&#xAC04;&#xC774; &#xC9C0;&#xB098; &#xB9CC;&#xB8CC;&#xB418;&#xC5C8;&#xB294;&#xC9C0;, &#xCE90;&#xC2DC;&#xB41C; &#xB9AC;&#xC18C;&#xC2A4;&#xB97C; &#xC0C8;&#xB85C; &#xAC31;&#xC2E0;&#xD574;&#xC57C; &#xD558;&#xB294;&#xC9C0; &#xC5EC;&#xBD80;&#xB97C; &#xBA85;&#xD655;&#xD788; &#xD310;&#xB2E8;&#xD560; &#xC218; &#xC788;&#xC74C;</li>
+<li>ETag &#xAC12;&#xC740; &#xD06C;&#xAE30; &apos;Strong&apos; ETag&#xC640; &apos;Weak&apos; Etag &#xB450; &#xAC00;&#xC9C0;&#xB85C; &#xAD6C;&#xBD84;&#xD568;</li>
+<li>Strong ETag&#xB294; &#xBAA8;&#xB4E0; &#xB9AC;&#xC18C;&#xC2A4;&#xC5D0; &#xB300;&#xD574; &#xC720;&#xC77C;&#xD55C; &#xAC12;&#xC744; &#xAC00;&#xC838;&#xC57C; &#xD558;&#xBBC0;&#xB85C; Weak Etagdp &#xBE44;&#xD574; &#xAC12;&#xC744; &#xC0DD;&#xC131;&#xD558;&#xB294; &#xACFC;&#xC815;&#xC774; &#xAE4C;&#xB2E4;&#xB85C;&#xC6C0;</li>
+<li>Weak ETag&#xB97C; &#xC0AC;&#xC6A9;&#xD558;&#xBA74; &#xBE44;&#xAD50;&#xC801; &#xAC04;&#xB2E8;&#xD558;&#xAC8C; &#xAC12;&#xC744; &#xC0DD;&#xC131;&#xD560; &#xC218; &#xC788;&#xC9C0;&#xB9CC; ETag &#xAC12;&#xC5D0; &#xB300;&#xD55C; &#xC2E0;&#xB8B0;&#xB3C4;&#xAC00; &#xC57D;&#xD574;&#xC9D0;</li>
+<li>&#xC774; &#xB54C; ETag &#xAC12;&#xC5D0; &apos;w/&apos;&#xB97C; &#xBD99;&#xC5EC; &apos;&#xC774; &#xAC12;&#xC774; &#xC720;&#xC77C;&#xD558;&#xC9C0; &#xC54A;&#xC744; &#xC218; &#xC788;&#xC9C0;&#xB9CC; &#xAD1C;&#xCC2E;&#xB2E4;&apos;&#xB294; &#xBA54;&#xC2DC;&#xC9C0;&#xB97C; &#xCE90;&#xC2DC; &#xC11C;&#xBC84;&#xC5D0; &#xC804;&#xB2EC;&#xD574;&#xC57C; &#xD568;</li>
+</ul>
+<h5 id="cache-control-public">Cache-Control: public</h5>
+<ul>
+<li>public&#xC73C;&#xB85C; &#xC124;&#xC815;&#xD558;&#xBA74; &#xADF8; &#xC751;&#xB2F5;&#xC740; &#xBAA8;&#xB4E0; &#xCE90;&#xC2DC; &#xC11C;&#xBC84;&#xC5D0; &#xCE90;&#xC2DC;&#xB420; &#xC218; &#xC788;&#xACE0; &#xC0AC;&#xC6A9;&#xC790; &#xC81C;&#xD55C; &#xC5C6;&#xC774; &#xBAA8;&#xB4E0; &#xC0AC;&#xC6A9;&#xC790;&#xC5D0;&#xAC8C; &#xC751;&#xB2F5;&#xC774; &#xC804;&#xB2EC;&#xB420; &#xC218; &#xC788;&#xC74C;</li>
+</ul>
+<h5 id="cache-control-private">Cache-Control: private</h5>
+<ul>
+<li>private&#xC73C;&#xB85C; &#xC124;&#xC815;&#xD558;&#xBA74; HTTP &#xC694;&#xCCAD;&#xC5D0; &#xB300;&#xD55C; &#xC751;&#xB2F5;&#xC740; &#xC694;&#xCCAD;&#xD55C; &#xC0AC;&#xC6A9;&#xC790;&#xB9CC; &#xCE90;&#xC2DC;&#xD560; &#xC218; &#xC788;&#xACE0; CDN &#xAC19;&#xC740; &#xBC94;&#xC6A9; &#xCE90;&#xC2DC; &#xC11C;&#xBC84;&#xC5D0;&#xC11C;&#xB294; &#xCE90;&#xC2DC;&#xD560; &#xC218; &#xC5C6;&#xC74C;</li>
+<li>&#xC5C4;&#xBC00;&#xD558;&#xAC8C; &#xB9D0;&#xD558;&#xBA74; &#xBC94;&#xC6A9; &#xCE90;&#xC2DC; &#xC11C;&#xBC84;&#xC5D0;&#xC11C;&#xB3C4; &#xCE90;&#xC2DC;&#xD560; &#xC218; &#xC788;&#xC9C0;&#xB9CC; &#xADF8; &#xC751;&#xB2F5;&#xC744; &#xBAA8;&#xB4E0; &#xC0AC;&#xC6A9;&#xC790;&#xC5D0;&#xAC8C; &#xACF5;&#xC720;&#xD560; &#xC218; &#xC5C6;&#xC74C;</li>
+<li>&#xACB0;&#xB860;&#xC801;&#xC73C;&#xB85C; &#xCD5C;&#xC885; &#xC0AC;&#xC6A9;&#xC790;&#xC758; &#xBE0C;&#xB77C;&#xC6B0;&#xC800;&#xC5D0;&#xC11C;&#xB9CC; &#xC774; &#xC751;&#xB2F5;&#xC744; &#xC790;&#xC720;&#xB86D;&#xAC8C; &#xCE90;&#xC2DC;&#xD560; &#xC218; &#xC788;&#xC74C;</li>
+<li>Cache-Control: private&#xC744; &#xC124;&#xC815;&#xD55C;&#xB2E4;&#xACE0; &#xD574;&#xC11C; &#xC751;&#xB2F5;&#xC5D0; &#xB2F4;&#xAE34; &#xAC1C;&#xC778; &#xC815;&#xBCF4;&#xAE4C;&#xC9C0; &#xBCF4;&#xD638;&#xB418;&#xC9C0;&#xB294; &#xC54A;&#xC73C;&#xB2C8; &#xC8FC;&#xC758;&#xD574;&#xC57C; &#xD568;</li>
+</ul>
+<h5 id="cache-control-no-cache">Cache-Control: no-cache</h5>
+<ul>
+<li>no-cache &#xC9C0;&#xC2DC;&#xC790;&#xB294; &#xC694;&#xCCAD;&#xACFC; &#xC751;&#xB2F5; &#xD5E4;&#xB354;&#xC5D0; &#xBAA8;&#xB450; &#xC0AC;&#xC6A9;&#xD560; &#xC218; &#xC788;&#xC9C0;&#xB9CC; &#xC57D;&#xAC04;&#xC758; &#xC758;&#xBBF8; &#xCC28;&#xC774;&#xAC00; &#xC788;&#xC74C;</li>
+<li>&#xC774; &#xC9C0;&#xC2DC;&#xC790;&#xAC00; &#xC694;&#xCCAD; &#xD5E4;&#xB354;&#xC5D0; &#xC788;&#xC73C;&#xBA74; &#xBE0C;&#xB77C;&#xC6B0;&#xC800;&#xB294; &#xC6D0;&#xBCF8; &#xC11C;&#xBC84;&#xB098; &#xADF8; &#xC911;&#xAC04;&#xC5D0; &#xC874;&#xC7AC;&#xD558;&#xB294; &#xCE90;&#xC2DC; &#xC11C;&#xBC84;&#xB4E4;&#xC5D0;&#xAC8C; &apos;&#xCE90;&#xC2DC;&#xB41C; &#xC751;&#xB2F5;&#xC744; &#xBC1B;&#xC9C0; &#xC54A;&#xACA0;&#xB2E4;&apos;&#xB294; &#xBA54;&#xC2DC;&#xC9C0;&#xB97C; &#xC804;&#xB2EC;&#xD558;&#xB294; &#xAC83;&#xACFC; &#xAC19;&#xC74C;<ul>
+<li>max-age=0&#xC744; &#xC0AC;&#xC6A9;&#xD558;&#xB294; &#xAC83;&#xACFC; &#xBE44;&#xC2B7;&#xD558;&#xC9C0;&#xB9CC; max-age=0&#xC740; &#xCE90;&#xC2DC;&#xB41C; &#xCF58;&#xD150;&#xCE20;&#xC5D0; &#xBCC0;&#xACBD;&#xC774; &#xC788;&#xB294;&#xC9C0;&#xB97C; &#xBA3C;&#xC800; &#xAC80;&#xC99D;&#xD568;</li>
+</ul>
+</li>
+<li>&#xC774; &#xC9C0;&#xC2DC;&#xC790;&#xAC00; HTTP &#xC751;&#xB2F5; &#xD574;&#xB354;&#xC5D0; &#xD3EC;&#xD568;&#xB418;&#xBA74; &#xC6D0;&#xBCF8; &#xC11C;&#xBC84;&#xAC00; &#xCE90;&#xC2DC; &#xC11C;&#xBC84;&#xB4E4;&#xC5D0;&#xAC8C; &#xCE90;&#xC2DC;&#xB41C; &#xC751;&#xB2F5;&#xC744; &#xBCF4;&#xB0B4;&#xAE30; &#xC804; &#xC6D0;&#xBCF8; &#xC11C;&#xBC84;&#xB97C; &#xD56D;&#xC0C1; &#xD655;&#xC778;&#xD558;&#xB3C4;&#xB85D; &#xAC15;&#xC81C;&#xD568;<ul>
+<li>max-age=0 &#xC124;&#xC815;&#xACFC; &#xB3D9;&#xC77C;&#xD558;&#xAC8C; &#xB3D9;&#xC791;&#xD568;</li>
+</ul>
+</li>
+</ul>
+<h5 id="cache-control-no-store">Cache-Control: no-store</h5>
+<ul>
+<li>HTTP &#xC694;&#xCCAD; &#xB610;&#xB294; &#xC751;&#xB2F5; &#xD5E4;&#xB354;&#xC5D0; &#xBAA8;&#xB450; &#xC0AC;&#xC6A9;&#xD560; &#xC218; &#xC788;&#xACE0; &#xC4F0;&#xC784;&#xC0C8;&#xB3C4; no-cache&#xC640; &#xB3D9;&#xC77C;&#xD568;</li>
+<li>&#xC774; &#xC9C0;&#xC2DC;&#xBB38;&#xC740; &#xC11C;&#xBC84;&#xAC00; &#xB85C;&#xCEEC; &#xC800;&#xC7A5;&#xC18C;&#xC5D0; &#xBA54;&#xC2DC;&#xC9C0;&#xB97C; &#xC800;&#xC7A5;&#xD558;&#xC9C0; &#xC54A;&#xB3C4;&#xB85D; &#xC9C0;&#xC2DC;&#xD568;</li>
+<li>no-cache&#xB294; &#xC751;&#xB2F5;&#xC744; &#xD56D;&#xC0C1; &#xCD5C;&#xC2E0; &#xC0C1;&#xD0DC;&#xB85C; &#xC720;&#xC9C0;&#xD558;&#xB3C4;&#xB85D; &#xC9C0;&#xC2DC;&#xD558;&#xC9C0;&#xB9CC; &#xB85C;&#xCEEC; &#xC800;&#xC7A5;&#xC18C;&#xC5D0; &#xC800;&#xC7A5;&#xD558;&#xB294; &#xAC83;&#xC744; &#xB9C9;&#xC9C0; &#xC54A;&#xC74C;</li>
+<li>&#xBC18;&#xBA74; no-store&#xB294; &#xC751;&#xB2F5; &#xBA54;&#xC2DC;&#xC9C0;&#xAC00; &#xC800;&#xC7A5;&#xC18C;&#xC5D0; &#xC800;&#xC7A5;&#xB418;&#xB294; &#xAC83; &#xC790;&#xCCB4;&#xB97C; &#xAE08;&#xC9C0;&#xD568;</li>
+<li>&#xACB0;&#xAD6D; &#xC774; &#xC9C0;&#xC2DC;&#xBB38;&#xC758; &#xBAA9;&#xC801;&#xC740; &#xCE90;&#xC2DC; &#xB370;&#xC774;&#xD130;&#xC758; &#xC608;&#xAE30;&#xCE58; &#xC54A;&#xC740; &#xC720;&#xCD9C;&#xC744; &#xBC29;&#xC9C0;&#xD558;&#xB824;&#xB294; &#xAC83;&#xC784;</li>
+</ul>
+<h4 id="&#xCE90;&#xC2DC;-&#xC720;&#xD6A8;&#xC131;-&#xCCB4;&#xD06C;">&#xCE90;&#xC2DC; &#xC720;&#xD6A8;&#xC131; &#xCCB4;&#xD06C;</h4>
+<ul>
+<li>&#xCE90;&#xC2DC;&#xC5D0; &#xC800;&#xC7A5;&#xB418;&#xC5B4; &#xC788;&#xB294; &#xC751;&#xB2F5;&#xC758; age&#xAC00; max-age&#xAC12;&#xC744; &#xB118;&#xC5C8;&#xB2E4;&#xBA74; &#xCE90;&#xC2DC;&#xB294; &#xC6D0;&#xBCF8; &#xC11C;&#xBC84;&#xC5D0; &#xC694;&#xCCAD;&#xC744; &#xBCF4;&#xB0B4; &#xC0C8; &#xC751;&#xB2F5;&#xC744; &#xBC1B;&#xC544;&#xC57C; &#xD568;</li>
+<li>&#xC774; &#xB54C; &#xD574;&#xB2F9; &#xCF58;&#xD150;&#xCE20;&#xC5D0; &#xC544;&#xBB34;&#xB7F0; &#xBCC0;&#xD654;&#xAC00; &#xC5C6;&#xC5C8;&#xB2E4;&#xBA74; &#xC774;&#xBBF8; &#xCE90;&#xC2DC;&#xB41C; &#xB0B4;&#xC6A9;&#xACFC; &#xB3D9;&#xC77C;&#xD55C; &#xC751;&#xB2F5;&#xC744; &#xB2E4;&#xC2DC; &#xB9CC;&#xB4E4;&#xC5B4; &#xBCF4;&#xB0BC; &#xAC83;&#xC774;&#xBBC0;&#xB85C; &#xC6D0;&#xBCF8; &#xC11C;&#xBC84;&#xC5D0;&#xC11C;&#xB294; &#xC758;&#xBBF8; &#xC5C6;&#xB294; &#xC751;&#xB2F5;&#xC744; &#xB9CC;&#xB4E4;&#xC5B4; &#xC804;&#xC1A1;&#xD558;&#xAE30; &#xC704;&#xD574; &#xC11C;&#xBC84; &#xC790;&#xC6D0;&#xACFC; &#xB124;&#xD2B8;&#xC6CC;&#xD06C; &#xB300;&#xC5ED;&#xD3ED;&#xC744; &#xB0AD;&#xBE44;&#xD568;</li>
+<li>&#xC774;&#xB97C; &#xBC29;&#xC9C0;&#xD558;&#xACE0;&#xC790; HTTP &#xD45C;&#xC900;&#xC740; &#xC870;&#xAC74;&#xBD80; &#xC694;&#xCCAD;&#xC774;&#xB77C;&#xB294; &#xB9E4;&#xCEE4;&#xB2C8;&#xC998;&#xC744; &#xC815;&#xC758;&#xD568;</li>
+<li>&#xC774; &#xB9E4;&#xCEE4;&#xB2C8;&#xC998;&#xC740; &#xC800;&#xC7A5;&#xB41C; &#xC751;&#xB2F5; TTL&#xC774; &#xB9CC;&#xB8CC;&#xB418;&#xC5C8;&#xC744; &#xACBD;&#xC6B0; &#xCE90;&#xC2DC;&#xAC00; &#xD56D;&#xC0C1; &#xC6D0;&#xBCF8; &#xC11C;&#xBC84;&#xC5D0;&#xC11C; &#xC644;&#xC804;&#xD55C; &#xCF58;&#xD150;&#xCE20;&#xB97C; &#xBC1B;&#xC544;&#xC624;&#xB294; &#xB300;&#xC2E0; TTL &#xC8FC;&#xAE30; &#xB3D9;&#xC548; &#xCF58;&#xD150;&#xCE20;&#xC5D0; &#xBCC0;&#xD654;&#xAC00; &#xC788;&#xC744; &#xB54C;&#xC5D0;&#xB9CC; &#xC0C8; &#xC751;&#xB2F5;&#xC744; &#xB9CC;&#xB4E4;&#xB3C4;&#xB85D; &#xC694;&#xCCAD;&#xD568;</li>
+<li>&#xC870;&#xAC74;&#xBD80; &#xC694;&#xCCAD;&#xC744; &#xBCF4;&#xB0BC; &#xB54C;&#xB294; &#xC2DC;&#xAC04;&#xC744; &#xAE30;&#xBC18;&#xC73C;&#xB85C; &#xBCF4;&#xB0B4;&#xB294; &#xBC29;&#xBC95;&#xACFC; &#xCF58;&#xD150;&#xCE20;&#xB97C; &#xAE30;&#xBC18;&#xC73C;&#xB85C; &#xBCF4;&#xB0B4;&#xB294; &#xB450; &#xAC00;&#xC9C0; &#xBC29;&#xBC95;&#xC744; &#xC0AC;&#xC6A9;&#xD560; &#xC218; &#xC788;&#xC74C;<ul>
+<li>&#xC2DC;&#xAC04; &#xAE30;&#xBC18;&#xC758; &#xC870;&#xAC74;&#xBD80; &#xC694;&#xCCAD;&#xC740; &#xCF58;&#xD150;&#xCE20;&#xC758; &#xCD5C;&#xC885; &#xBCC0;&#xACBD; &#xC2DC;&#xAC04; &#xC911;&#xC2EC;&#xC73C;&#xB85C; &#xD655;&#xC778;(If-Modified-Since)</li>
+<li>&#xCF58;&#xD150;&#xCE20; &#xAE30;&#xBC18;&#xC758; &#xC870;&#xAC74;&#xBD80; &#xC694;&#xCCAD;&#xC740; &#xCF58;&#xD150;&#xCE20; &#xACE0;&#xC733;&#xAC12; &#xC911;&#xC2EC;&#xC73C;&#xB85C; &#xD655;&#xC778;(If-None-Match)<ul>
+<li>&#xCF58;&#xD150;&#xCE20; &#xACE0;&#xC733;&#xAC12;&#xC740; &#xC8FC;&#xB85C; &#xD574;&#xC2DC;&#xAC12;&#xC73C;&#xB85C; &#xCD94;&#xCD9C;&#xD558;&#xACE0; ETag&#xC5D0; &#xC774; &#xACE0;&#xC733;&#xAC12;&#xC744; &#xB123;&#xC5B4; &#xD655;&#xC778;</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h4 id="&#xCE90;&#xC2DC;-&#xCF58;&#xD150;&#xCE20;-&#xAC31;&#xC2E0;">&#xCE90;&#xC2DC; &#xCF58;&#xD150;&#xCE20; &#xAC31;&#xC2E0;</h4>
+<ul>
+<li>&#xC6F9; &#xC0AC;&#xC774;&#xD2B8;&#xAC00; &#xAC1C;&#xD3B8;&#xB418;&#xC5C8;&#xAC70;&#xB098; &#xCF58;&#xD150;&#xCE20;&#xB97C; &#xAE09;&#xD558;&#xAC8C; &#xBCC0;&#xACBD;&#xD588;&#xB2E4;&#xBA74; &#xCE90;&#xC2DC;&#xC5D0; &#xC800;&#xC7A5;&#xB41C; &#xBCF5;&#xC0AC;&#xBCF8;&#xB4E4;&#xC744; &#xAC15;&#xC81C;&#xB85C; &#xAC31;&#xC2E0;&#xD574;&#xC57C; &#xC0AC;&#xC6A9;&#xC790;&#xC5D0;&#xAC8C; &#xC815;&#xC0C1;&#xC801;&#xC778; &#xC6F9; &#xD398;&#xC774;&#xC9C0;&#xB97C; &#xC11C;&#xBE44;&#xC2A4;&#xD560; &#xC218; &#xC788;&#xC74C;</li>
+<li>&#xCE90;&#xC2DC;&#xC5D0; &#xC800;&#xC7A5;&#xB41C; &#xB0B4;&#xC6A9;&#xC744; &#xAC31;&#xC2E0;&#xD558;&#xAE30; &#xC704;&#xD574; &#xB450; &#xAC00;&#xC9C0; &#xBC29;&#xBC95;&#xC744; &#xC0AC;&#xC6A9;&#xD560; &#xC218; &#xC788;&#xC74C;</li>
+</ul>
+<h5 id="&#xD37C;&#xC9C0;">&#xD37C;&#xC9C0;</h5>
+<ul>
+<li>&#xC800;&#xC7A5;&#xC18C;&#xB97C; &#xC644;&#xC804;&#xD788; &#xC9C0;&#xC6B0;&#xB294; &#xBC29;&#xC2DD;&#xC73C;&#xB85C; &#xB300;&#xBD80;&#xBD84;&#xC758; &#xCE90;&#xC2DC; &#xC11C;&#xBC84;&#xAC00; &#xCE90;&#xC2DC;&#xB97C; &#xBAA8;&#xB450; &#xC9C0;&#xC6B0;&#xB77C;&#xB294; &#xBA85;&#xB839;&#xC5B4;&#xB098; API&#xB97C; &#xC81C;&#xACF5;&#xD568;</li>
+<li>&#xBE0C;&#xB77C;&#xC6B0;&#xC800; &#xC635;&#xC158; &#xBA54;&#xB274;&#xC5D0;&#xC11C; &#xB85C;&#xCEEC; &#xCE90;&#xC2DC;&#xB97C; &#xC9C0;&#xC6B8; &#xC218; &#xC788;&#xC74C;</li>
+<li>&#xCE90;&#xC2DC; &#xC11C;&#xBC84;&#xC5D0;&#xC11C; &#xD55C;&#xAEBC;&#xBC88;&#xC5D0; &#xB9CE;&#xC740; &#xCF58;&#xD150;&#xCE20;&#xB97C; &#xD37C;&#xC9C0;&#xD558;&#xB824;&#xBA74; &#xC6D0;&#xBCF8; &#xC11C;&#xBC84;&#xC5D0; &#xCDA9;&#xBD84;&#xD55C; &#xC790;&#xC6D0;&#xC774; &#xC788;&#xB294;&#xC9C0; &#xD655;&#xC778;&#xD558;&#xB294; &#xB4F1; &#xC8FC;&#xC758;&#xB97C; &#xAE30;&#xC6B8;&#xC5EC;&#xC57C; &#xD568;</li>
+<li>&#xCE90;&#xC2DC;&#xB418;&#xC9C0; &#xC54A;&#xC740; &#xB9CE;&#xC740; &#xC694;&#xCCAD;&#xC774; &#xD55C;&#xAEBC;&#xBC88;&#xC5D0; &#xC6D0;&#xBCF8; &#xC11C;&#xBC84;&#xB85C; &#xBAB0;&#xB824; &#xC11C;&#xBC84; &#xB9AC;&#xC18C;&#xC2A4;&#xAC00; &#xB9CE;&#xC774; &#xC0AC;&#xC6A9;&#xB3C4;&#xB294; &#xBD80;&#xB2F4;&#xC774; &#xC788;&#xAE30; &#xB54C;&#xBB38;&#xC784;</li>
+</ul>
+<h5 id="&#xBB34;&#xD6A8;&#xD654;">&#xBB34;&#xD6A8;&#xD654;</h5>
+<ul>
+<li>&#xC870;&#xAC74;&#xBD80; &#xC694;&#xCCAD;&#xC744; &#xD1B5;&#xD574; &#xCE90;&#xC2DC;&#xB41C; &#xB9AC;&#xC18C;&#xC2A4;&#xB4E4; &#xC911; &#xBCC0;&#xACBD;&#xC774; &#xC788;&#xC5C8;&#xB358; &#xB9AC;&#xC18C;&#xC2A4;&#xB4E4;&#xB9CC; &#xC0C8;&#xB85C; &#xAC31;&#xC2E0;&#xD558;&#xB294; &#xBC29;&#xBC95;</li>
+<li>&#xD37C;&#xC9C0;&#xC640; &#xB3D9;&#xC77C;&#xD558;&#xAC8C; &#xC0C8; &#xCF58;&#xD150;&#xCE20;&#xB97C; &#xBC1B;&#xC544;&#xAC00;&#xB824;&#xB294; &#xD2B8;&#xB798;&#xD53D;&#xC774; &#xC7A0;&#xC2DC; &#xC99D;&#xAC00;&#xD560; &#xC218; &#xC788;&#xC9C0;&#xB9CC;, &#xC2E4;&#xC81C;&#xB85C; &#xBCC0;&#xACBD;&#xB41C; &#xB9AC;&#xC18C;&#xC2A4; &#xD55C;&#xC5D0;&#xC11C;&#xB9CC; &#xC804;&#xCCB4; &#xCF58;&#xD150;&#xCE20;&#xAC00; &#xBC18;&#xD658;&#xB418;&#xBBC0;&#xB85C; &#xB124;&#xD2B8;&#xC6CC;&#xD06C; &#xB300;&#xC5ED;&#xD3ED; &#xB0AD;&#xBE44;&#xB97C; &#xD06C;&#xAC8C; &#xC904;&#xC77C; &#xC218; &#xC788;&#xC74C;</li>
+</ul>
+<h3 id="&#xCE90;&#xC2DC;-&#xCD5C;&#xC801;&#xD654;-&#xBC29;&#xC548;">&#xCE90;&#xC2DC; &#xCD5C;&#xC801;&#xD654; &#xBC29;&#xC548;</h3>
+<ul>
+<li><p>&#xCE90;&#xC2DC; &#xC0AC;&#xC6A9;&#xC744; &#xCD5C;&#xB300;&#xD654;&#xD560; &#xC218; &#xC788;&#xB294; 3&#xAC00;&#xC9C0; &#xAE30;&#xBCF8; &#xC6D0;&#xB9AC;&#xB294; &#xB2E4;&#xC74C;&#xACFC; &#xAC19;&#xC74C;</p>
+</li>
+<li><p>&#xCD5C;&#xB300;&#xD55C; &#xB9CE;&#xC774; &#xCE90;&#xC2DC;&#xD558;&#xB77C;</p>
+</li>
+<li>&#xCD5C;&#xB300;&#xD55C; &#xC624;&#xB798; &#xCE90;&#xC2DC;&#xD558;&#xB77C;</li>
+<li>&#xCD5C;&#xB300;&#xD55C; &#xAC00;&#xAE4C;&#xC774; &#xCE90;&#xC2DC;&#xD558;&#xB77C;</li>
+</ul>
+<h4 id="&#xCE90;&#xC2DC;-&#xAC00;&#xB2A5;&#xD55C;-&#xCF58;&#xD150;&#xCE20;-&#xAD6C;&#xBD84;&#xD558;&#xAE30;">&#xCE90;&#xC2DC; &#xAC00;&#xB2A5;&#xD55C; &#xCF58;&#xD150;&#xCE20; &#xAD6C;&#xBD84;&#xD558;&#xAE30;</h4>
+<ul>
+<li>&#xBA3C;&#xC800; &#xC6F9; &#xD398;&#xC774;&#xC9C0;&#xC758; &#xC5B4;&#xB5A4; &#xCF58;&#xD150;&#xCE20;&#xB97C; &#xCE90;&#xC2DC;&#xD560; &#xC218; &#xC788;&#xB294;&#xC9C0;, &#xD639;&#xC740; &#xCE90;&#xC2DC;&#xD558;&#xBA74; &#xC548; &#xB418;&#xB294;&#xC9C0; &#xBC14;&#xB85C; &#xC54C;&#xC544;&#xC57C; &#xD568;</li>
+<li>&#xCE90;&#xC2DC;&#xD560; &#xC218; &#xC788;&#xB294; &#xB9AC;&#xC18C;&#xC2A4;&#xB4E4;&#xC744; &#xCD5C;&#xB300;&#xD55C; &#xCC3E;&#xC544;&#xB0B4; &#xCE90;&#xC2DC;&#xB97C; &#xD1B5;&#xD574; &#xC11C;&#xBE44;&#xC2A4;&#xD574;&#xC57C; &#xD568;</li>
+<li>&#xC6F9; &#xC0AC;&#xC774;&#xD2B8;&#xB97C; &#xAD6C;&#xC131;&#xD558;&#xB294; &#xCF58;&#xD150;&#xCE20;&#xB294; &#xD06C;&#xAC8C; &#xC815;&#xC801;&#xC778; &#xCF58;&#xD150;&#xCE20;&#xC640; &#xB3D9;&#xC801;&#xC778; &#xCF58;&#xD150;&#xCE20;&#xB85C; &#xBD84;&#xB958;&#xD560; &#xC218; &#xC788;&#xC74C;</li>
+<li>&#xC815;&#xC801; &#xCF58;&#xD150;&#xCE20;&#xB780; URL&#xC744; &#xD638;&#xCD9C;&#xD560; &#xB584;&#xB9C8;&#xB2E4; &#xBCC0;&#xD568;&#xC5C6;&#xC774; &#xAC19;&#xC740; &#xC751;&#xB2F5;&#xC744; &#xC8FC;&#xB294; &#xCF58;&#xD150;&#xCE20;&#xB85C; &#xC774;&#xBBF8;&#xC9C0;, CSS, &#xC790;&#xBC14;&#xC2A4;&#xD06C;&#xB9BD;&#xD2B8; &#xB4F1;&#xC774; &#xB300;&#xD45C;&#xC801;&#xC778; &#xC815;&#xC801; &#xCF58;&#xCCB8;&#xCE20;&#xC5D0; &#xC18D;&#xD568;<ul>
+<li>&#xC774;&#xB4E4;&#xC740; &#xD398;&#xC774;&#xC9C0;&#xB97C; &#xB3D9;&#xC801;&#xC774;&#xACE0; &#xD654;&#xB824;&#xD558;&#xAC8C; &#xB9CC;&#xB4DC;&#xB294;&#xB370; &#xC911;&#xC694;&#xD55C; &#xC5ED;&#xD560;&#xC744; &#xD558;&#xC9C0;&#xB9CC; &#xD638;&#xCD9C;&#xD560; &#xB54C;&#xB9C8;&#xB2E4; &#xC18C;&#xC2A4; &#xCF54;&#xB4DC; &#xC790;&#xCCB4;&#xAC00; &#xB2EC;&#xB77C;&#xC9C0;&#xC9C4; &#xC54A;&#xAE30; &#xB54C;&#xBB38;&#xC5D0; &#xC815;&#xC801; &#xCF58;&#xD150;&#xCE20;&#xB85C; &#xBD84;&#xB958;&#xD568;</li>
+</ul>
+</li>
+<li>&#xB3D9;&#xC801; &#xCF58;&#xD150;&#xCE20;&#xB780; &#xC0AC;&#xC6A9;&#xC790;&#xAC00; &#xC694;&#xCCAD;&#xD560; &#xB54C;&#xB9C8;&#xB2E4; &#xC11C;&#xBC84;&#xC5D0; &#xC758;&#xD574; &#xB2E4;&#xC2DC; &#xC0DD;&#xC131;, &#xC751;&#xB2F5;&#xB418;&#xB294; &#xCF58;&#xD150;&#xCE20;&#xB85C; &#xC11C;&#xBC84;&#xC5D0;&#xC11C;&#xB294; HTTP &#xC694;&#xCCAD;&#xACFC; &#xD568;&#xAED8; &#xC785;&#xB825; &#xC2DC;&#xAC04;&#xC744; &#xD3EC;&#xD568;&#xD55C; &#xB2E4;&#xC591;&#xD55C; &#xBCC0;&#xC22B;&#xAC12;&#xC5D0; &#xB530;&#xB77C; &#xCF58;&#xD150;&#xCE20;&#xB97C; &#xB3D9;&#xC801;&#xC73C;&#xB85C; &#xC0DD;&#xC131;&#xD558;&#xC5EC; &#xC751;&#xB2F5;&#xD568;<ul>
+<li>Ajax&#xB97C; &#xC0AC;&#xC6A9;&#xD55C; XHR &#xC694;&#xCCAD;&#xC774;&#xB098; &#xAC1C;&#xC778;&#xD654;&#xB41C; &#xC6F9; &#xD398;&#xC774;&#xC9C0;&#xB4E4;&#xC774; &#xB300;&#xD45C;&#xC801;&#xC778; &#xB3D9;&#xC801; &#xCF58;&#xD150;&#xCE20;&#xC784;</li>
+</ul>
+</li>
+</ul>
+<p><br></p>
+<ul>
+<li>&#xACB0;&#xB860;&#xC801;&#xC73C;&#xB85C;, &#xCE90;&#xC2DC;&#xD558;&#xAE30; &#xC5B4;&#xB824;&#xC6B4; &#xCF58;&#xD150;&#xCE20;&#xB294; &#xC544;&#xB798;&#xC640; &#xAC19;&#xC774; &#xBD84;&#xB958; &#xD560; &#xC218; &#xC788;&#xC74C;<ul>
+<li>&#xAC1C;&#xC778;&#xD654;&#xB41C; &#xCF58;&#xD150;&#xCE20;</li>
+<li>API &#xD638;&#xCD9C;&#xC774;&#xB098;, Ajax &#xC694;&#xCCAD;&#xC5D0; &#xB300;&#xD55C; &#xCF58;&#xD150;&#xCE20;</li>
+<li>Beacon &#xC804;&#xB2EC; &#xB610;&#xB294; &#xCFE0;&#xD0A4; &#xC124;&#xC815;&#xC744; &#xC704;&#xD55C; &#xD638;&#xCD9C;</li>
+</ul>
+</li>
+</ul>
+<h4 id="&#xC62C;&#xBC14;&#xB978;-&#xCE90;&#xC2DC;-&#xC815;&#xCC45;-&#xC124;&#xC815;&#xD558;&#xAE30;">&#xC62C;&#xBC14;&#xB978; &#xCE90;&#xC2DC; &#xC815;&#xCC45; &#xC124;&#xC815;&#xD558;&#xAE30;</h4>
+<ul>
+<li>&#xCE90;&#xC2DC; &#xC815;&#xCC45;&#xC744; &#xC138;&#xC6B0;&#xB294; &#xAC83;&#xC740; &#xCE90;&#xC2DC;&#xD560; &#xCF58;&#xD150;&#xCE20;&#xB4E4;&#xC758; &#xC131;&#xACA9;&#xC744; &#xD30C;&#xC545;&#xD558;&#xACE0; &#xADF8;&#xB8F9;&#xD654;&#xD558;&#xB294; &#xAC83;&#xACFC; &#xAC19;&#xC74C;</li>
+<li><p>&#xC6B0;&#xC120; &#xC6F9; &#xC0AC;&#xC774;&#xD2B8;&#xB97C; &#xAD6C;&#xC131;&#xD558;&#xB294; &#xB9AC;&#xC18C;&#xC2A4;&#xB4E4;&#xC744; &#xAC19;&#xC740; &#xD0C0;&#xC785;&#xB07C;&#xB9AC; &#xADF8;&#xB8F9;&#xD654;&#xD558;&#xACE0; &#xC544;&#xB798;&#xC640; &#xAC19;&#xC740; &#xC21C;&#xC11C;&#xB97C; &#xCC38;&#xACE0;&#xD574; &#xD558;&#xC704; &#xADF8;&#xB8F9;&#xC744; &#xB098;&#xB204;&#xACE0; &#xCE90;&#xC2DC; &#xC815;&#xCC45;&#xC744; &#xC815;&#xC758;&#xD568;</p>
+</li>
+<li><p>&#xBA3C;&#xC800; &#xCE90;&#xC2DC;&#xD560; &#xC218; &#xC788;&#xB294; &#xCF58;&#xD150;&#xCE20;&#xC778;&#xC9C0; &#xD310;&#xB2E8;&#xD569;&#xB2C8;&#xB2E4;.</p>
+<ul>
+<li>&#xC77C;&#xBC18;&#xC801;&#xC73C;&#xB85C; &#xC815;&#xC801; &#xCF58;&#xD150;&#xCE20;&#xB4E4;&#xC744; &#xCE90;&#xC2DC; &#xAC00;&#xB2A5;&#xD55C; &#xD398;&#xC774;&#xC9C0;&#xB85C; &#xC815;&#xC758;&#xD560; &#xC218; &#xC788;&#xC9C0;&#xB9CC;, &#xBCF4;&#xC548;&#xC5D0; &#xBBFC;&#xAC10;&#xD55C; &#xB0B4;&#xC6A9;&#xC774; &#xB2F4;&#xACA8; &#xC788;&#xB294; &#xC815;&#xC801; &#xCF58;&#xD150;&#xCE20;&#xB294; &#xCE90;&#xC2DC;&#xD558;&#xBA74; &#xC548;&#xB428;</li>
+<li>&#xB3D9;&#xC801; &#xCF58;&#xD150;&#xCE20;&#xB77C;&#xACE0; &#xBAA8;&#xB450; &#xCE90;&#xC2DC;&#xAC00; &#xBD88;&#xAC00;&#xB2A5; &#xD558;&#xC9C0; &#xC54A;&#xC74C;</li>
+<li>&#xCE90;&#xC2DC;&#xD560; &#xC218; &#xC5C6;&#xB294; &#xCF58;&#xD150;&#xCE20;&#xC5D0;&#xB294; &#xC751;&#xB2F5;&#xD5E4;&#xB354;&#xC5D0; Cache-Control: no-store&#xB97C; &#xBD99;&#xC784;</li>
+</ul>
+</li>
+<li>&#xCE90;&#xC2DC;&#xD560; &#xC218; &#xC788;&#xB294;<ul>
+<li>&#xBCC0;&#xACBD;&#xC5D0; &#xBBFC;&#xAC10;&#xD55C; &#xB9AC;&#xC18C;&#xC2A4;&#xB294; &#xC751;&#xB2F5; &#xD5E4;&#xB354;&#xC5D0; Cache-Control: no-cache&#xB098; Cache-Control: max-age=0&#xC744; &#xC0AC;&#xC6A9;&#xD574; &#xC124;&#xC815;&#xD568;</li>
+</ul>
+</li>
+<li>&#xCE90;&#xC2DC;&#xD560; &#xCF58;&#xD150;&#xCE20;&#xC758; &#xC131;&#xACA9;&#xC744; &#xD310;&#xB2E8;&#xD569;&#xB2C8;&#xB2E4;.<ul>
+<li>&#xBAA8;&#xB4E0; &#xC0AC;&#xC6A9;&#xC790;&#xC5D0;&#xAC8C; &#xACF5;&#xD1B5;&#xC73C;&#xB85C; &#xC0AC;&#xC6A9;&#xB420; &#xC218; &#xC788;&#xB2E4;&#xBA74; Cache-Control: public&#xC744;, &#xAC1C;&#xC778;&#xD654;&#xB41C; &#xCF58;&#xD150;&#xCE20;&#xB77C;&#xBA74; Cache-Control: private&#xC744; &#xC0AC;&#xC6A9;&#xD568;</li>
+<li>private&#xC744; &#xC124;&#xC815;&#xD55C; &#xACBD;&#xC6B0; &#xC77C;&#xBC18;&#xC801;&#xC778; &#xC6F9; &#xCE90;&#xC2DC; &#xC11C;&#xBC84;&#xC5D0;&#xC11C; &#xD574;&#xB2F9; &#xCF58;&#xD150;&#xCE20;&#xB97C; &#xCE90;&#xC2DC;&#xD560; &#xC218; &#xC5C6;&#xACE0; &#xC624;&#xC9C1; &#xAC1C;&#xC778; &#xBE0C;&#xB77C;&#xC6B0;&#xC800;&#xC5D0;&#xB9CC; &#xCE90;&#xC2DC;&#xD568;</li>
+</ul>
+</li>
+<li>&#xB9C8;&#xC9C0;&#xB9C9;&#xC73C;&#xB85C; &#xCE90;&#xC2DC; &#xC8FC;&#xAE30;&#xB97C; &#xC124;&#xC815;&#xD558;&#xACE0; max-age&#xB97C; &#xCD94;&#xAC00;&#xD569;&#xB2C8;&#xB2E4;.</li>
+</ul>
+<h4 id="&#xCE90;&#xC2DC;-&#xC8FC;&#xAE30;-&#xACB0;&#xC815;&#xD558;&#xAE30;">&#xCE90;&#xC2DC; &#xC8FC;&#xAE30; &#xACB0;&#xC815;&#xD558;&#xAE30;</h4>
+<ul>
+<li><p>&#xAE30;&#xBCF8;&#xC801;&#xC778; &#xCE90;&#xC2DC; &#xC815;&#xCC45;&#xC774; &#xACB0;&#xC815;&#xB418;&#xBA74; &#xAD6C;&#xCCB4;&#xC801;&#xC73C;&#xB85C; &#xC5BC;&#xB9C8; &#xB3D9;&#xC548; &#xCE90;&#xC2DC;&#xD560; &#xAC83;&#xC778;&#xC9C0; &#xACB0;&#xC815;&#xD574;&#xC57C; &#xD568;</p>
+</li>
+<li><p>&#xCE90;&#xC2DC; &#xC8FC;&#xAE30;&#xB294; &#xCF58;&#xD150;&#xCE20; &#xD0C0;&#xC785;&#xBCC4;&#xB85C; &#xB2E4;&#xB974;&#xAC8C; &#xC124;&#xC815;&#xD560; &#xC218; &#xC788;&#xC2B5;&#xB2C8;&#xB2E4;.</p>
+<ul>
+<li>&#xC774;&#xBBF8;&#xC9C0;&#xB098; &#xB3D9;&#xC601;&#xC0C1; &#xB4F1; &#xBBF8;&#xB514;&#xC5B4; &#xD30C;&#xC77C;&#xC740; &#xD55C;&#xBC88; &#xCC3D;&#xC791;&#xB418;&#xC5B4; &#xC6F9; &#xD398;&#xC774;&#xC9C0;&#xC5D0; &#xAC8C;&#xC2DC;&#xB418;&#xBA74; &#xC27D;&#xAC8C; &#xBCC0;&#xACBD;&#xB418;&#xC9C0; &#xC54A;&#xC74C;</li>
+<li>&#xBCC0;&#xACBD;&#xD574;&#xC57C; &#xD560; &#xB54C; &#xB9C1;&#xD06C;&#xB97C; &#xBCC0;&#xACBD;&#xD558;&#xB294; &#xACBD;&#xC6B0;&#xAC00; &#xB9CE;&#xC74C;</li>
+<li>&#xB9C1;&#xD06C; &#xC790;&#xCCB4;&#xAC00; &#xBC14;&#xB00C;&#xBA74; &#xC790;&#xC5F0;&#xC2A4;&#xB7FD;&#xAC8C; &#xCE90;&#xC2DC; &#xC11C;&#xBC84;&#xAC00; &#xC6D0;&#xBCF8; &#xC11C;&#xBC84;&#xB85C;&#xBD80;&#xD130; &#xD574;&#xB2F9; &#xCF58;&#xD150;&#xCE20;&#xB97C; &#xBD88;&#xB7EC;&#xC640; &#xCE90;&#xC2DC;&#xD568;</li>
+<li>&#xB530;&#xB77C;&#xC11C; &#xD2B9;&#xBCC4;&#xD55C; &#xC774;&#xC720;&#xAC00; &#xC5C6;&#xB2E4;&#xBA74; &#xCE90;&#xC2DC; &#xC8FC;&#xAE30;&#xB97C; 1&#xB144; &#xC815;&#xB3C4;&#xB85C; &#xAE38;&#xAC8C; &#xC124;&#xC815;&#xD558;&#xB294; &#xAC83;&#xC744; &#xAD8C;&#xC7A5;&#xD568;</li>
+</ul>
+</li>
+<li>&#xB9CC;&#xC57D; &#xB9C1;&#xD06C; &#xBCC0;&#xACBD; &#xC5C6;&#xC774; &#xC774;&#xBBF8;&#xC9C0; &#xB0B4;&#xC6A9;&#xB9CC; &#xBC14;&#xAFD4;&#xC57C; &#xD55C;&#xB2E4;&#xBA74; &#xCE90;&#xC2DC; &#xBB34;&#xD6A8;&#xD654; &#xBC29;&#xC2DD;&#xC73C;&#xB85C; &#xD574;&#xB2F9; &#xC774;&#xBBF8;&#xC9C0;&#xB9CC; &#xCE90;&#xC2DC;&#xC5D0; &#xC5C5;&#xB370;&#xC774;&#xD2B8;&#xD569;&#xB2C8;&#xB2E4;.</li>
+<li>&#xBAA8;&#xB4E0; &#xC815;&#xC801; &#xD30C;&#xC77C;&#xC5D0; &#xB300;&#xD574; &#xCE90;&#xC2DC; &#xC8FC;&#xAE30;&#xB97C; &#xAE38;&#xAC8C; &#xC124;&#xC815;&#xD558;&#xACE0; &#xC218;&#xB3D9;&#xC73C;&#xB85C; &#xCE90;&#xC2DC; &#xC8FC;&#xAE30;&#xB97C; &#xAD00;&#xB9AC;&#xD558;&#xB294; &#xBC29;&#xBC95;&#xB3C4; &#xC788;&#xC2B5;&#xB2C8;&#xB2E4;.</li>
+</ul>
+<h4 id="&#xCE90;&#xC2DC;&#xC5D0;-&#xC801;&#xD569;&#xD55C;-&#xB514;&#xB809;&#xD130;&#xB9AC;-&#xAD6C;&#xC870;-&#xAD6C;&#xC131;&#xD558;&#xAE30;">&#xCE90;&#xC2DC;&#xC5D0; &#xC801;&#xD569;&#xD55C; &#xB514;&#xB809;&#xD130;&#xB9AC; &#xAD6C;&#xC870; &#xAD6C;&#xC131;&#xD558;&#xAE30;</h4>
+<ul>
+<li>&#xC6F9; &#xCF58;&#xD150;&#xCE20;&#xC758; &#xAD6C;&#xC131; &#xC694;&#xC18C;&#xB4E4;&#xC744; &#xD30C;&#xC545;&#xD558;&#xACE0; &#xCF58;&#xD150;&#xCE20;&#xBCC4; &#xCE90;&#xC2DC; &#xC815;&#xCC45;&#xC744; &#xC815;&#xC758;&#xD588;&#xB2E4;&#xBA74; &#xCE90;&#xC2DC; &#xCE5C;&#xD654;&#xC801; &#xB514;&#xB809;&#xD130;&#xB9AC; &#xAD6C;&#xC870;&#xB97C; &#xAD6C;&#xC131;&#xD558;&#xB294; &#xAC83;&#xC744; &#xAD8C;&#xD568;</li>
+<li>&#xCE90;&#xC2DC;&#xC5D0; &#xC801;&#xD569;&#xD55C; &#xB514;&#xB809;&#xD130;&#xB9AC; &#xAD6C;&#xC870;&#xB97C; &#xAD6C;&#xC131;&#xD558;&#xB824;&#xBA74;</li>
+<li>&#xCCAB; &#xBC88;&#xC9F8;&#xB85C; &#xCE90;&#xC2DC;&#xD560; &#xC218; &#xC788;&#xB294; &#xCF58;&#xD150;&#xCE20;&#xB4E4;&#xC744; &#xBCC4;&#xB3C4;&#xC5D0; &#xD3F4;&#xB354;&#xC5D0; &#xBD84;&#xB958;&#xD574; &#xAD00;&#xB9AC;&#xD558;&#xAE30;</li>
+<li>&#xB450; &#xBC88;&#xC9F8;&#xB85C; &#xCE90;&#xC2DC; &#xC8FC;&#xAE30;&#xBCC4;&#xB85C; &#xB098;&#xB204;&#xC5B4; &#xAD6C;&#xC131;&#xD558;&#xAE30;</li>
+<li>&#xC138; &#xBC88;&#xC9F8;&#xB85C; &#xB3D9;&#xC77C;&#xD55C; &#xD30C;&#xC77C;&#xC744; &#xC5EC;&#xB7EC; &#xACF3;&#xC5D0; &#xBD84;&#xC0B0;&#xC2DC;&#xD0A4;&#xC9C0; &#xC54A;&#xAE30;</li>
+</ul>
+<h4 id="&#xCE90;&#xC2DC;-&#xD0A4;-&#xC62C;&#xBC14;&#xB974;&#xAC8C;-&#xC0AC;&#xC6A9;&#xD558;&#xAE30;">&#xCE90;&#xC2DC; &#xD0A4; &#xC62C;&#xBC14;&#xB974;&#xAC8C; &#xC0AC;&#xC6A9;&#xD558;&#xAE30;</h4>
+<ul>
+<li>&#xCE90;&#xC2DC; &#xD0A4;&#xB780; &#xCE90;&#xC2DC; &#xC11C;&#xBC84;&#xAC00; &#xC6D0;&#xBCF8;&#xC758; &#xBCF5;&#xC0AC;&#xBCF8;&#xC744; &#xC800;&#xC7A5;&#xD558;&#xACE0; &#xBE60;&#xB974;&#xAC8C; &#xC870;&#xD68C;&#xD558;&#xAE30; &#xC704;&#xD574; &#xC0AC;&#xC6A9;&#xD558;&#xB294; &#xD0A4; &#xAC12;&#xC744; &#xB9D0;&#xD568;</li>
+<li>&#xC77C;&#xBC18;&#xC801;&#xC73C;&#xB85C; &#xC6F9; &#xCE90;&#xC2DC;&#xB294; &#xD074;&#xB77C;&#xC774;&#xC5B8;&#xD2B8;&#xAC00; &#xC694;&#xCCAD;&#xD558;&#xB294; URL&#xC744; &#xCE90;&#xC2DC; &#xD0A4;&#xB85C; &#xC0AC;&#xC6A9;&#xD568;</li>
+</ul>
+<p><br></p>
+<ul>
+<li>&#xC6D0;&#xBCF8; &#xC11C;&#xBC84;&#xC5D0; &#xD558;&#xB098;&#xC758; &#xC6D0;&#xBCF8; &#xD30C;&#xC77C;&#xB9CC; &#xC874;&#xC7AC;&#xD558;&#xB294;&#xB370; &#xCE90;&#xC2DC;&#xC5D0; &#xBCF5;&#xC0AC;&#xBCF8;&#xC774; &#xC5EC;&#xB7EC; &#xAC1C; &#xC874;&#xC7AC;&#xD558;&#xB294; &#xAC83;&#xC744; &#xCE90;&#xC2DC; &#xC624;&#xC5FC;&#xC774;&#xB77C;&#xACE0; &#xD568;</li>
+<li>&#xCE90;&#xC2DC; &#xC624;&#xC5FC;&#xC740; &#xCD5C;&#xC885; &#xC0AC;&#xC6A9;&#xC790;&#xC5D0;&#xAC8C; &#xC601;&#xD5A5;&#xC744; &#xC8FC;&#xC9C0;&#xB294; &#xC54A;&#xC9C0;&#xB9CC; &#xCE90;&#xC2DC; &#xC11C;&#xBC84;&#xC758; &#xD6A8;&#xC728;&#xC131;&#xC5D0; &#xD070; &#xC601;&#xD5A5;&#xC744; &#xBBF8;&#xCE60; &#xC218; &#xC788;&#xC74C;</li>
+<li>&#xB610;&#xD55C; &#xCE90;&#xC2DC;&#xAC00; &#xD37C;&#xC9C0;&#xB41C; &#xACBD;&#xC6B0; &#xC6D0;&#xBCF8; &#xC11C;&#xBC84;&#xAC00; &#xC608;&#xAE30;&#xCE58; &#xC54A;&#xC740; &#xD2B8;&#xB798;&#xD53D; &#xBD80;&#xB2F4;&#xC744; &#xC904; &#xC218; &#xC788;&#xC74C;</li>
+<li>&#xCE90;&#xC2DC; &#xC624;&#xC5FC;&#xC744; &#xD53C;&#xD558;&#xAE30; &#xC704;&#xD574;&#xC11C;</li>
+<li>&#xCCAB; &#xBC88;&#xCA30;&#xB85C; URL&#xC5D0; &#xBD99;&#xC740; &#xD2B9;&#xC815; &#xCFFC;&#xB9AC; &#xC2A4;&#xD2B8;&#xB9C1; &#xAC12;&#xC774; &#xB2EC;&#xB77C;&#xC9C0;&#xB354;&#xB77C;&#xB3C4; &#xC751;&#xB2F5;&#xC774; &#xD56D;&#xC0C1; &#xAC19;&#xB2E4;&#xBA74; &#xCE90;&#xC2DC; &#xD0A4;&#xC5D0;&#xC11C; &#xCFFC;&#xB9AC; &#xC2A4;&#xD2B8;&#xB9C1;&#xC744; &#xBB34;&#xC2DC;&#xD558;&#xB3C4;&#xB85D; &#xC124;&#xC815;&#xD574;&#xC57C; &#xD568;</li>
+<li>&#xB450; &#xBC88;&#xC7AC;&#xB85C; &#xCFFC;&#xB9AC; &#xC2A4;&#xD2B8;&#xB9C1;&#xC758; &#xC21C;&#xC11C;&#xB97C; &#xB3D9;&#xC77C;&#xD558;&#xAC8C; &#xC815;&#xB82C;&#xD574;&#xC57C; &#xD568;<ul>
+<li>&#xCFFC;&#xB9AC; &#xC2A4;&#xD2B8;&#xB9C1;&#xC758; &#xC21C;&#xC11C;&#xAC00; &#xBC14;&#xB00C;&#xBA74; &#xAC12;&#xC740; &#xB3D9;&#xC77C;&#xD55C;&#xB370;, &#xCE90;&#xC2DC;&#xC5D0;&#xC11C;&#xB294; &#xAC01;&#xAC01;&#xC758; URL&#xB4E4;&#xC744; &#xB2E4;&#xB974;&#xAC8C; &#xC778;&#xC2DD;&#xD558;&#xACE0; &#xB2E4;&#xB978; &#xCE90;&#xC2DC; &#xD0A4;&#xB85C; &#xC800;&#xC7A5;&#xD568;</li>
+</ul>
+</li>
+<li>&#xC138; &#xBC88;&#xC9F8;&#xB85C; Vary &#xD5E4;&#xB354;&#xB97C; &#xBC14;&#xB974;&#xAC8C; &#xC0AC;&#xC6A9;&#xD574;&#xC57C; &#xD568;</li>
+</ul>
+<p><br></p>
+<ul>
+<li>&#xCE90;&#xC2DC; &#xCDA9;&#xB3CC;&#xC774;&#xB780; &#xC694;&#xCCAD; URL&#xC774; &#xD558;&#xB098;&#xC778;&#xB370; &#xBE0C;&#xB77C;&#xC6B0;&#xC800; &#xD658;&#xACBD;&#xC5D0; &#xB530;&#xB77C; &#xC11C;&#xBC84;&#xC5D0;&#xC11C; &#xC81C;&#xACF5;&#xD558;&#xB294; &#xC751;&#xB2F5;&#xC774; &#xB2EC;&#xB77C;&#xC838; &#xACB0;&#xAD6D; &#xCD5C;&#xCD08; &#xC694;&#xCCAD;&#xD55C; &#xBE0C;&#xB77C;&#xC6B0;&#xC800;&#xC758; &#xC751;&#xB2F5;&#xB9CC; &#xCE90;&#xC2DC;&#xB418;&#xB294; &#xAC83;&#xC744; &#xC758;&#xBBF8;&#xD568;<ul>
+<li>&#xC774; &#xACBD;&#xC6B0; &#xB098;&#xBA38;&#xC9C0; &#xBE0C;&#xB77C;&#xC6B0;&#xC800; &#xD658;&#xACBD;&#xC744; &#xC0AC;&#xC6A9;&#xD558;&#xB294; &#xC0AC;&#xC6A9;&#xC790;&#xB4E4;&#xC740; &#xC798;&#xBABB;&#xB41C; &#xC751;&#xB2F5;&#xC744; &#xBC1B;&#xC74C;</li>
+</ul>
+</li>
+<li>&#xCE90;&#xC2DC; &#xCDA9;&#xB3CC;&#xC740; &#xB3D9;&#xC801; &#xD398;&#xC774;&#xC9C0;&#xB97C; &#xCE90;&#xC2DC;&#xD560; &#xB54C; &#xC8FC;&#xB85C; &#xBC1C;&#xC0DD;&#xD568;</li>
+<li>&#xC774; &#xD604;&#xC0C1;&#xC744; &#xD53C;&#xD558;&#xB824;&#xBA74; &#xAE30;&#xBCF8;&#xC801;&#xC73C;&#xB85C; &#xB3D9;&#xC801; &#xD398;&#xC774;&#xC9C0;&#xC5D0;&#xB294; &#xCE90;&#xC2DC;&#xB97C; &#xC801;&#xC6A9;&#xD558;&#xC9C0; &#xC54A;&#xC544;&#xC57C; &#xD568;</li>
+<li>&#xC77C;&#xBD80; &#xB3D9;&#xC801; &#xD398;&#xC774;&#xC9C0;&#xC5D0; &#xCE90;&#xC2DC;&#xB97C; &#xC0AC;&#xC6A9;&#xD558;&#xACE0;&#xC790; &#xD55C;&#xB2E4;&#xBA74; Cache-Control: private&#xC73C;&#xB85C; &#xC0AC;&#xC6A9;&#xC790; &#xBE0C;&#xB77C;&#xC6B0;&#xC800;&#xC5D0;&#xB9CC; &#xCE90;&#xC2DC;&#xD558;&#xC5EC; &#xD398;&#xC774;&#xC9C0; &#xB85C;&#xB529; &#xC2DC;&#xAC04;&#xC744; &#xB2E8;&#xCD95;&#xD560; &#xC218; &#xC788;&#xC74C;</li>
+</ul>
+<h4 id="cdn-&#xC0AC;&#xC6A9;&#xD558;&#xAE30;">CDN &#xC0AC;&#xC6A9;&#xD558;&#xAE30;</h4>
+<ul>
+<li>&#xCE90;&#xC2DC; &#xD6A8;&#xC728;&#xD654;&#xB97C; &#xC704;&#xD55C; 3&#xC6D0;&#xCE59; &#xC911; &#xB9C8;&#xC9C0;&#xB9C9;&#xC740; &#xC0AC;&#xC6A9;&#xC790;&#xC5D0;&#xAC8C; &#xAC00;&#xAE5D;&#xAC8C; &#xCE90;&#xC2DC;&#xD558;&#xB77C;&#xB294; &#xAC83;&#xC784;</li>
+<li>CDN &#xC11C;&#xBE44;&#xC2A4;&#xB97C; &#xC0AC;&#xC6A9;&#xD558;&#xBA74; &#xC138;&#xACC4; &#xC5EC;&#xB7EC; &#xC9C0;&#xC5ED; &#xB370;&#xC774;&#xD130; &#xC13C;&#xD130;&#xB4E4;&#xC5D0; &#xB9AC;&#xBC84;&#xC2A4; &#xD504;&#xB85D;&#xC2DC; &#xCE90;&#xC2DC; &#xC11C;&#xBC84;&#xB97C; &#xB450;&#xACE0; &#xD544;&#xC694;&#xD55C; &#xC815;&#xC801; &#xCF58;&#xD150;&#xCE20;&#xB4E4;&#xC744; &#xC800;&#xC7A5;&#xD574;&#xB193;&#xC744; &#xC218; &#xC788;&#xC74C;</li>
+<li>&#xB610;&#xD55C; &#xC0AC;&#xC6A9;&#xC790;&#xAC00; &#xAD00;&#xB828; &#xCF58;&#xD150;&#xCE20;&#xB97C; &#xC694;&#xCCAD;&#xD560; &#xB54C; &#xC0AC;&#xC6A9;&#xC790;&#xC640; &#xAC00;&#xC7A5; &#xAC00;&#xAE4C;&#xC6B4; &#xCE90;&#xC2DC; &#xC11C;&#xBC84;&#xC5D0;&#xC11C; &#xD574;&#xB2F9; &#xCF58;&#xD150;&#xCE20;&#xAC00; &#xC11C;&#xBE44;&#xC2A4;&#xB418;&#xBBC0;&#xB85C; &#xC2DC;&#xAC04; &#xC9C0;&#xC5F0; &#xC5C6;&#xC774; &#xBE60;&#xB974;&#xAC8C; &#xC6F9; &#xD398;&#xC774;&#xC9C0;&#xB97C; &#xB85C;&#xB529;&#xD560; &#xC218; &#xC788;&#xC74C;</li>
+</ul>
+<h3 id="&#xB3D9;&#xC801;-&#xCF58;&#xD150;&#xCE20;-&#xCE90;&#xC2DC;">&#xB3D9;&#xC801; &#xCF58;&#xD150;&#xCE20; &#xCE90;&#xC2DC;</h3>
+<ul>
+<li>&#xC11C;&#xBC84;&#xC5D0;&#xC11C; &#xB3D9;&#xC801; &#xCF58;&#xD150;&#xCE20;&#xB97C; &#xCC98;&#xB9AC;&#xD558;&#xB294; &#xC2DC;&#xAC04;&#xC774; &#xC804;&#xCCB4; &#xC751;&#xB2F5; &#xC2DC;&#xAC04; &#xC911; &#xB9CE;&#xC740; &#xBD80;&#xBD84;&#xC744; &#xCC28;&#xC9C0;&#xD568;</li>
+<li>&#xB3D9;&#xC801; &#xCF58;&#xD150;&#xCE20;&#xB97C; &#xCE90;&#xC2DC;&#xD560; &#xC218; &#xC788;&#xB2E4;&#xBA74;, &#xC815;&#xC801; &#xCF58;&#xD150;&#xCE20;&#xB97C; &#xCE90;&#xC2DC;&#xD558;&#xB294; &#xAC83;&#xBCF4;&#xB2E4; &#xB354; &#xB9CE;&#xC740; &#xC131;&#xB2A5; &#xAC1C;&#xC120; &#xD6A8;&#xACFC;&#xB97C; &#xC5BB;&#xC74C;</li>
+<li><p>&#xC6F9; &#xCF58;&#xD150;&#xCE20;&#xB4E4;&#xC744; &#xD2B9;&#xC131;&#xC5D0; &#xB530;&#xB77C; &#xBD84;&#xB958;&#xD574; &#xBCF4;&#xBA74;, &#xCE90;&#xC2DC;&#xD560; &#xC218; &#xC788;&#xB294; &#xB3D9;&#xC801; &#xCF58;&#xD150;&#xCE20;&#xB4E4;&#xC744; &#xCC3E;&#xC744; &#xC218; &#xC788;&#xC74C;</p>
+</li>
+<li><p>&#xC815;&#xC801; &#xCF58;&#xD150;&#xCE20;&#xC640; &#xB3D9;&#xC801; &#xCF58;&#xD150;&#xCE20;</p>
+</li>
+<li>&#xC775;&#xBA85; &#xCF58;&#xD150;&#xCE20;&#xC640; &#xAC1C;&#xC778;&#xD654; &#xCF58;&#xD150;&#xCE20;</li>
+<li>&#xC2DC;&#xAC04;&#xC5D0; &#xBBFC;&#xAC10;&#xD55C; &#xCF58;&#xD150;&#xCE20;&#xC640; &#xC2DC;&#xAC04;&#xC5D0; &#xB454;&#xAC10;&#xD55C; &#xCF58;&#xD150;&#xCE20;</li>
+</ul>
+<h4 id="&#xB3D9;&#xC801;-&#xCF58;&#xD150;&#xCE20;-&#xCE90;&#xC2DC;">&#xB3D9;&#xC801; &#xCF58;&#xD150;&#xCE20; &#xCE90;&#xC2DC;</h4>
+<ul>
+<li><p>&#xB3D9;&#xC801; &#xCF58;&#xD150;&#xCE20;&#xB97C; &#xC0AC;&#xC6A9;&#xC790;&#xC5D0;&#xAC8C; &#xC804;&#xB2EC;&#xD558;&#xAE30; &#xC704;&#xD574; &#xC6D0;&#xBCF8; &#xC11C;&#xBC84;&#xB294; &#xB450; &#xAC00;&#xC9C0; &#xBC29;&#xBC95;&#xC744; &#xC0AC;&#xC6A9;&#xD568;</p>
+</li>
+<li><p>&#xB3D9;&#xC801; &#xC815;&#xBCF4;&#xB97C; &#xCFE0;&#xD0A4;&#xC5D0; &#xB123;&#xC5B4; &#xBCF4;&#xB0B8;&#xB2E4;.</p>
+</li>
+<li><p>Ajax &#xC694;&#xCCAD;&#xC73C;&#xB85C; &#xAD00;&#xB828; &#xC815;&#xBCF4;&#xB97C; &#xB3D9;&#xC801;&#xC73C;&#xB85C; &#xBC1B;&#xC544;&#xC628;&#xB2E4;.</p>
+</li>
+<li><p>&#xCFE0;&#xD0A4;, &#xD5E4;&#xB354; &#xD639;&#xC740; &#xCFFC;&#xB9AC; &#xC2A4;&#xD2B8;&#xB9C1;&#xC5D0; &#xB3D9;&#xC801; &#xCF58;&#xD150;&#xCE20;&#xC5D0; &#xB300;&#xD55C; &#xC815;&#xBCF4;&#xAC00; &#xC788;&#xC73C;&#xBA74; &#xC774; &#xC815;&#xBCF4;&#xB4E4;&#xC744; &#xCE90;&#xC2DC; &#xD0A4;&#xC5D0; &#xCD94;&#xAC00;&#xD568;&#xC73C;&#xB85C;&#xC368; &#xB3D9;&#xC801; &#xCF58;&#xD150;&#xCE20;&#xB97C; &#xCE90;&#xC2DC;&#xD560; &#xC218; &#xC788;&#xC74C;</p>
+</li>
+<li>&#xC774;&#xB54C; &#xCCAB; &#xBC88;&#xC9F8;&#xB85C; &#xBCF4;&#xC548;&#xC5D0; &#xC8FC;&#xC758;&#xD574;&#xC57C; &#xD568;<ul>
+<li>&#xB300;&#xBD80;&#xBD84;&#xC758; &#xAC1C;&#xC778; &#xC815;&#xBCF4;&#xB294; POST &#xC694;&#xCCAD;&#xC73C;&#xB85C; &#xBCF4;&#xB0B4;&#xACE0; POST &#xC694;&#xCCAD;&#xC5D0; &#xB300;&#xD55C; &#xC751;&#xB2F5;&#xC740; &#xCE90;&#xC2DC;&#xD558;&#xC9C0; &#xC54A;&#xB294; &#xAC83;&#xC774; &#xC77C;&#xBC18;&#xC801;&#xC774;&#xC9C0;&#xB9CC;, &#xBCF4;&#xC548;&#xC5D0; &#xAD00;&#xD55C; &#xBB38;&#xC81C;&#xB294; &#xC5EC;&#xB7EC; &#xBC88; &#xD655;&#xC778;&#xD558;&#xACE0; &#xC870;&#xC2EC;&#xD574;&#xB3C4; &#xC9C0;&#xB098;&#xCE58;&#xC9C0; &#xC54A;&#xC74C;</li>
+</ul>
+</li>
+<li>&#xB450; &#xBC88;&#xC9F8;&#xB85C; &#xCE90;&#xC2DC; &#xC11C;&#xBC84; &#xC6A9;&#xB7C9;&#xC5D0; &#xC720;&#xC758;&#xD574;&#xC57C; &#xD568;</li>
+</ul>
+<p><br></p>
+<ul>
+<li>Ajax &#xC694;&#xCCAD;&#xC744; &#xD1B5;&#xD574; &#xC804;&#xB2EC;&#xB418;&#xB294; &#xB3D9;&#xC801; &#xCF58;&#xD150;&#xCE20;&#xB97C; &#xCE90;&#xC2DC;&#xD558;&#xB294; &#xBC29;&#xBC95;&#xC740; &#xAC04;&#xB2E8;&#xD568;<ul>
+<li>Ajax &#xC694;&#xCCAD;&#xC5D0; &#xB300;&#xD55C; &#xC751;&#xB2F5; &#xD615;&#xD0DC;&#xC778; JSON/XML &#xD0C0;&#xC785; &#xCF58;&#xD150;&#xCE20;&#xB294; &#xB2E4;&#xB978; &#xC815;&#xC801; &#xC751;&#xB2F5; &#xD0C0;&#xC785;&#xACFC; &#xB3D9;&#xC77C;&#xD55C; &#xBC29;&#xC2DD;&#xC73C;&#xB85C; &#xCE90;&#xC2DC;&#xD560; &#xC218; &#xC788;&#xAE30; &#xB54C;&#xBB38;&#xC784;</li>
+</ul>
+</li>
+<li>&#xB2E8;&#xC9C0; &#xC2DC;&#xAC04;&#xC5D0; &#xBBFC;&#xAC10;&#xD55C;&#xC9C0; &#xC5EC;&#xBD80;&#xAC00; &#xAD00;&#xAC74;&#xC784;</li>
+</ul>
+<p><br></p>
+<ul>
+<li>&#xCE90;&#xC2DC;&#xB294; &#xD1B5;&#xC0C1; HTTP GET &#xBC29;&#xC2DD;&#xC5D0;&#xC11C; &#xB3D9;&#xC791;&#xD558;&#xBBC0;&#xB85C; Ajax &#xC694;&#xCCAD;&#xC5D0; &#xB300;&#xD55C; &#xC751;&#xB2F5;&#xC744; &#xCE90;&#xC2DC;&#xD558;&#xACE0;&#xC790; &#xD558;&#xBA74; HTTP POST &#xBC29;&#xC2DD;&#xBCF4;&#xB2E4; GET &#xBC29;&#xC2DD;&#xC744; &#xC0AC;&#xC6A9;&#xD568;</li>
+<li>&#xCE90;&#xC2DC; &#xC8FC;&#xAE30;&#xB85C; 0 TTL&#xC744; &#xC0AC;&#xC6A9;&#xD558;&#xB824;&#xBA74; &#xC11C;&#xBC84;&#xC5D0;&#xC11C; &#xD574;&#xB2F9; &#xCF58;&#xD150;&#xCE20;&#xC5D0; &#xB300;&#xD55C; If-Modified-Since(IMS)(&#xC870;&#xAC74;&#xBD80; &#xC694;&#xCCAD; &#xC694;&#xCCAD;&#xC744; &#xC9C0;&#xC6D0;&#xD574;&#xC57C; &#xD568;</li>
+<li>IMS &#xC694;&#xCCAD;&#xC744; &#xC9C0;&#xC6D0;&#xD558;&#xC9C0; &#xC54A;&#xC73C;&#xBA74; &#xCE90;&#xC2DC;&#xD558;&#xC9C0; &#xC54A;&#xB294; &#xAC83;&#xACFC; &#xB3D9;&#xC77C;&#xD568;</li>
+</ul>
+<h4 id="post-&#xC751;&#xB2F5;-&#xCE90;&#xC2DC;">POST &#xC751;&#xB2F5; &#xCE90;&#xC2DC;</h4>
+<ul>
+<li>POST &#xBA54;&#xC11C;&#xB4DC;&#xB294; HTTP &#xD398;&#xC774;&#xB85C;&#xB4DC; &#xBA54;&#xC2DC;&#xC9C0;&#xC5D0; &#xCFFC;&#xB9AC; &#xC2A4;&#xD2B8;&#xB9C1;&#xC744; &#xD3EC;&#xD568;&#xC2DC;&#xCF1C; &#xBCF4;&#xB0BC; &#xB54C; &#xC0AC;&#xC6A9;&#xD568;</li>
+<li>GET &#xBA54;&#xC18C;&#xB4DC;&#xB294; &#xC694;&#xCCAD; URL&#xC5D0; &#xBD99;&#xC5EC; &#xBCF4;&#xB0BC; &#xC218; &#xC788;&#xB294; &#xCFFC;&#xB9AC; &#xC2A4;&#xD2B8;&#xB9C1; &#xAE38;&#xC774;&#xC5D0; &#xC81C;&#xD55C;&#xC774; &#xC788;&#xACE0;, &#xC694;&#xCCAD; URL&#xC774; &#xD0C0;&#xC778;&#xC5D0;&#xAC8C; &#xC27D;&#xAC8C; &#xB178;&#xCD9C;&#xB420; &#xC218; &#xC788;&#xC73C;&#xBBC0;&#xB85C; &#xAC1C;&#xC778; &#xC815;&#xBCF4;&#xB4E4;&#xC744; GET &#xBA54;&#xC18C;&#xB4DC;&#xB97C; &#xC774;&#xC6A9;&#xD574; &#xC11C;&#xBC84;&#xC5D0; &#xBCF4;&#xB0B4;&#xB294; &#xAC83;&#xC740; &#xC801;&#xD569;&#xD558;&#xC9C0; &#xC54A;&#xC74C;</li>
+<li>&#xBC18;&#xBA74; POST &#xBA54;&#xC18C;&#xB4DC;&#xB97C; &#xC0AC;&#xC6A9;&#xD558;&#xBA74; HTTP &#xD398;&#xC774;&#xB85C;&#xB4DC;&#xC5D0; &#xCFFC;&#xB9AC; &#xC2A4;&#xD2B8;&#xB9C1; &#xB0B4;&#xC6A9;&#xC744; &#xD3EC;&#xD568;&#xD574; &#xBCF4;&#xB0B4;&#xBBC0;&#xB85C; &#xB370;&#xC774;&#xD130; &#xD06C;&#xAE30;&#xC5D0; &#xC81C;&#xD55C;&#xC774; &#xC5C6;&#xACE0;, &#xD0C0;&#xC778;&#xC774; &#xBE0C;&#xB77C;&#xC6B0;&#xC800;&#xB97C; &#xD1B5;&#xD574; &#xC27D;&#xAC8C; &#xBCFC; &#xC218; &#xC5C6;&#xC5B4; &#xBCF4;&#xC548; &#xCE21;&#xBA74;&#xC5D0;&#xC11C;&#xB3C4; &#xC0C1;&#xB300;&#xC801;&#xC73C;&#xB85C; &#xC548;&#xC804;&#xD568;</li>
+<li>&#xB530;&#xB77C;&#xC11C; POST &#xBA54;&#xC18C;&#xB4DC;&#xB294; &#xBCF4;&#xD1B5; &#xBE0C;&#xB77C;&#xC6B0;&#xC800; &#xCE90;&#xC2DC;&#xB098; &#xC870;&#xD68C; &#xC774;&#xB825;&#xC5D0; &#xB0A8;&#xC9C0; &#xC54A;&#xACE0; &#xCE90;&#xC2DC; &#xC11C;&#xBC84;&#xC5D0; &#xCE90;&#xC2DC;&#xB418;&#xC5B4;&#xC11C;&#xB3C4; &#xC548;&#xB428;</li>
+</ul>
+<p><br></p>
+<ul>
+<li>&#xB9CC;&#xC57D; &#xC785;&#xB825; &#xB9E4;&#xAC1C; &#xBCC0;&#xC218;&#xAC00; &#xB3D9;&#xC77C;&#xD560; &#xB54C; &#xC11C;&#xBC84;&#xB85C;&#xBD80;&#xD130; &#xD56D;&#xC0C1; &#xB3D9;&#xC77C;&#xD55C; &#xC751;&#xB2F5;&#xC774; &#xBC18;&#xD658;&#xB41C;&#xB2E4;&#xBA74;, &#xB610; &#xADF8; &#xC751;&#xB2F5; &#xB0B4;&#xC6A9;&#xC774; &#xBCF4;&#xC548; &#xCE21;&#xBA74;&#xC5D0;&#xC11C; &#xACF5;&#xAC1C;&#xB418;&#xC5B4;&#xB3C4; &#xC548;&#xC804;&#xD55C; &#xB0B4;&#xC6A9;&#xC774;&#xB77C;&#xBA74; POST &#xC694;&#xCCAD;/&#xC751;&#xB2F5; &#xC5ED;&#xC2DC; &#xCE90;&#xC2DC;&#xD560; &#xC218; &#xC788;&#xC74C;<ul>
+<li>&#xB2E8; &#xCE90;&#xC2DC; &#xD0A4;&#xC5D0; &#xC694;&#xCCAD; &#xB9E4;&#xAC1C; &#xBCC0;&#xC22B;&#xAC12;&#xB4E4;&#xC774; &#xBAA8;&#xB450; &#xD3EC;&#xD568;&#xB418;&#xC5B4;&#xC57C; &#xCE90;&#xC2DC; &#xC624;&#xC5FC;, &#xCE90;&#xC2DC; &#xCDA9;&#xB3CC; &#xAC19;&#xC740; &#xC624;&#xB958; &#xD604;&#xC0C1;&#xC744; &#xBC29;&#xC9C0;&#xD560; &#xC218; &#xC788;&#xC74C;</li>
+</ul>
+</li>
+<li>&#xB610;&#xD55C; &#xCE90;&#xC2DC; &#xD0A4;&#xC5D0; &#xB9E4;&#xAC1C; &#xBCC0;&#xC22B;&#xAC12;&#xB4E4;&#xC774; &#xB178;&#xCD9C;&#xB418;&#xC9C0; &#xC54A;&#xC544;&#xC57C; &#xD558;&#xBBC0;&#xB85C; MD5 &#xAC19;&#xC740; &#xD574;&#xC2DC; &#xC54C;&#xACE0;&#xB9AC;&#xC998;&#xC744; &#xC774;&#xC6A9;&#xD574; &#xD0C0;&#xC778;&#xC774; &#xC27D;&#xAC8C; &#xC54C; &#xC218; &#xC5C6;&#xB3C4;&#xB85D; &#xAC12;&#xC744; &#xC554;&#xD638;&#xD654;&#xD574;&#xC57C; &#xD568;</li>
+<li>POST &#xC694;&#xCCAD;/&#xC751;&#xB2F5;&#xC744; &#xCE90;&#xC2DC;&#xD558;&#xB824;&#xBA74; &#xB2E4;&#xC74C;&#xACFC; &#xAC19;&#xC740; &#xC870;&#xAC74;&#xC744; &#xB9CC;&#xC871;&#xD574;&#xC57C; &#xD568;<ul>
+<li>&#xB9E4;&#xAC1C; &#xBCC0;&#xC22B;&#xAC12;&#xC5D0; &#xD56D;&#xC0C1; &#xAC19;&#xC740; &#xC751;&#xB2F5;&#xC774; &#xC624;&#xB294; &#xACBD;&#xC6B0;</li>
+<li>&#xAC1C;&#xC778; &#xC815;&#xBCF4;&#xAC00; &#xD3EC;&#xD568;&#xB418;&#xC9C0; &#xC54A;&#xC740; &#xACBD;&#xC6B0;</li>
+<li>&#xC694;&#xCCAD; &#xC0AC;&#xC774;&#xC988;&#xAC00; &#xD06C;&#xC9C0; &#xC54A;&#xC740; &#xACBD;&#xC6B0;</li>
+</ul>
+</li>
+<li>&#xC694;&#xCCAD; &#xC0AC;&#xC774;&#xC988;&#xB294; &#xCE90;&#xC2DC; &#xD0A4;&#xB97C; &#xAD6C;&#xC131;&#xD558;&#xB294; &#xC911;&#xC694;&#xD55C; &#xC694;&#xC18C;&#xC784;</li>
+<li>HTTP &#xD398;&#xC774;&#xB85C;&#xB4DC;&#xC640;&#xB294; &#xB2E4;&#xB974;&#xAC8C; &#xCE90;&#xC2DC; &#xD0A4;&#xB294; &#xD558;&#xB098;&#xC758; &#xC2A4;&#xD2B8;&#xB9C1;&#xC73C;&#xB85C; &#xAD6C;&#xC131;&#xB418;&#xAE30; &#xB54C;&#xBB38;&#xC5D0; &#xADF8; &#xAE38;&#xC774;&#xC5D0; &#xC81C;&#xD55C;&#xC774; &#xC788;&#xC744; &#xC218; &#xC788;&#xC74C;</li>
+</ul>
+<h3 id="&#xACE0;&#xAE09;-&#xCE90;&#xC2DC;-&#xC804;&#xB7B5;">&#xACE0;&#xAE09; &#xCE90;&#xC2DC; &#xC804;&#xB7B5;</h3>
+<ul>
+<li>&#xC6F9; &#xC0AC;&#xC774;&#xD2B8;&#xC758; 90% &#xC774;&#xC0C1;&#xC774; &#xC815;&#xC801; &#xCF58;&#xCCB8;&#xCE20;&#xC778; &#xAC83;&#xC744; &#xACE0;&#xB824;&#xD558;&#xBA74; &#xCE90;&#xC2DC; &#xC11C;&#xBC84;&#xC758; &#xC131;&#xB2A5;&#xC774; &#xC6F9; &#xC0AC;&#xC774;&#xD2B8; &#xB85C;&#xB529; &#xC18D;&#xB3C4;&#xC5D0; &#xC5BC;&#xB9C8;&#xB098; &#xD070; &#xC601;&#xD5A5;&#xC744; &#xBBF8;&#xCE58;&#xB294;&#xC9C0; &#xC9D0;&#xC791;&#xD560; &#xC218; &#xC788;&#xC74C;</li>
+<li>&#xC774; &#xC808;&#xC5D0;&#xC11C;&#xB294; &#xCE90;&#xC2DC; &#xC11C;&#xBC84;&#xC5D0;&#xC11C; &#xAE30;&#xBCF8;&#xC801;&#xC73C;&#xB85C; &#xC81C;&#xACF5;&#xD558;&#xB294; &#xCE90;&#xC2DC; &#xAE30;&#xB2A5; &#xC774;&#xC678;&#xC5D0; &#xCE90;&#xC2DC; &#xC131;&#xB2A5;&#xC744; &#xB354;&#xC6B1; &#xD5A5;&#xC0C1;&#xC2DC;&#xD0A4;&#xB294; &#xBD80;&#xAC00; &#xAE30;&#xB2A5;&#xB4E4;&#xC744; &#xC0B4;&#xD3B4;&#xBD04;</li>
+</ul>
+<h4 id="edge-side-include">Edge Side Include</h4>
+<ul>
+<li>&#xCCAB; &#xBC88;&#xC9F8; HTML&#xC774; &#xC11C;&#xBC84;&#xC5D0;&#xC11C; &#xBE0C;&#xB77C;&#xC6B0;&#xC800;&#xAE4C;&#xC9C0; &#xB3C4;&#xB2EC;&#xD558;&#xB294; &#xC2DC;&#xAC04;(Time To First Byte)&#xC740; &#xC6F9; &#xC0AC;&#xC774;&#xD2B8; &#xC131;&#xB2A5;&#xC744; &#xCE21;&#xC815;&#xD558;&#xB294; &#xB9E4;&#xC6B0; &#xC911;&#xC694;&#xD55C; &#xC9C0;&#xD45C;&#xC784;</li>
+<li>&#xD558;&#xC9C0;&#xB9CC; &#xC774; HTML&#xC744; &#xAD6C;&#xC131;&#xD558;&#xB294; &#xCF58;&#xD150;&#xCE20; &#xC911; &#xC11C;&#xBC84;&#xC5D0;&#xC11C; &#xB3D9;&#xC801;&#xC73C;&#xB85C; &#xB9CC;&#xB4E4;&#xC5B4;&#xB0B4;&#xB294; &#xBD80;&#xBD84;&#xB4E4;&#xC774; &#xC874;&#xC7AC;&#xD558;&#xAE30; &#xB54C;&#xBB38;&#xC5D0; &#xB9CE;&#xC740; &#xC6F9; &#xAD00;&#xB9AC;&#xC790;&#xB4E4;&#xC774; &#xCCAB; HTML&#xC744; &#xCE90;&#xC2DC;&#xD558;&#xC9C0; &#xC54A;&#xC74C;</li>
+<li>&#xB3D9;&#xC801;&#xC73C;&#xB85C; &#xBCC0;&#xD558;&#xB294; &#xBD80;&#xBD84;&#xC774; &#xB9E4;&#xC6B0; &#xC791;&#xB2E4;&#xBA74;, &#xADF8; &#xBD80;&#xBD84;&#xB9CC; &#xB530;&#xB85C; &#xB5F4;&#xC5B4; &#xBCC4;&#xB3C4;&#xB85C; &#xC218;&#xD589;&#xC2DC;&#xD0A8; &#xD6C4; &#xCE90;&#xC2DC;&#xB41C; &#xB098;&#xBA38;&#xC9C0; &#xBD80;&#xBD84;&#xACFC; &#xB2E4;&#xC2DC; &#xC870;&#xD569;&#xD560; &#xC218; &#xC788;&#xB2E4;&#xBA74; &#xB85C;&#xB529; &#xC131;&#xB2A5;&#xC774; &#xAC1C;&#xC120;&#xB420; &#xC218; &#xC788;&#xC74C;</li>
+<li>&#xC774;&#xCC98;&#xB7FC; &#xC778;&#xD130;&#xB137; &#xC5E3;&#xC9C0;&#xC5D0;&#xC11C; &#xC6F9; &#xD398;&#xC774;&#xC9C0; &#xC870;&#xAC01;&#xC744; &#xB3D9;&#xC801;&#xC73C;&#xB85C; &#xC870;&#xD569;, &#xC870;&#xB9BD;, &#xC804;&#xB2EC;&#xD560; &#xC218; &#xC788;&#xB3C4;&#xB85D; &#xC774;&#xC5D0; &#xB300;&#xD55C; &#xBB38;&#xBC95;&#xACFC; &#xC6A9;&#xB3C4; &#xB4F1;&#xC744; &#xC815;&#xC758;&#xD55C; XML &#xAE30;&#xBC18; &#xD45C;&#xC900; &#xB9C8;&#xD06C;&#xC5C5; &#xC5B8;&#xC5B4;&#xAC00; ESI&#xC784;</li>
+</ul>
+<p><br></p>
+<ul>
+<li>ESI&#xB97C; &#xC0AC;&#xC6A9;&#xD558;&#xBA74; &#xD55C; &#xD398;&#xC774;&#xC9C0; &#xC548;&#xC5D0; &#xB2E4;&#xB978; &#xD398;&#xC774;&#xC9C0;&#xB97C; &#xD3EC;&#xD568;&#xC2DC;&#xD0AC; &#xC218; &#xC788;&#xC744; &#xBFD0;&#xB9CC; &#xC544;&#xB2C8;&#xB77C; &#xAC01; &#xD398;&#xC774;&#xC9C0;&#xB4E4;&#xC774; &#xB3C5;&#xB9BD; &#xAC1D;&#xCCB4;&#xB85C; &#xCDE8;&#xAE09;&#xB418;&#xC5B4; &#xAC01;&#xAC01; &#xB2E4;&#xB978; &#xCE90;&#xC2DC; &#xC815;&#xCC45;&#xC744; &#xC0AC;&#xC6A9;&#xD560; &#xC218; &#xC788;&#xC74C;</li>
+<li>HTTP &#xD5E4;&#xB354; &#xC815;&#xBCF4;&#xB97C; &#xBCC0;&#xC218;&#xB85C; &#xCC38;&#xC870;&#xD560; &#xC218; &#xC788;&#xACE0;, &#xC870;&#xAC74;&#xBB38;&#xC744; &#xC0AC;&#xC6A9;&#xD574; &#xC774; &#xBCC0;&#xC22B;&#xAC12;&#xC5D0; &#xB530;&#xB77C; &#xB2E4;&#xB978; &#xBE44;&#xC988;&#xB2C8;&#xC2A4; &#xB85C;&#xC9C1;&#xC744; &#xC801;&#xC6A9;&#xD560; &#xC218;&#xB3C4; &#xC788;&#xC74C;</li>
+<li>&#xC5D0;&#xB7EC; &#xBC1C;&#xC0DD; &#xC2DC; &#xC774;&#xC5D0; &#xB530;&#xB978; &#xC608;&#xC678; &#xCC98;&#xB9AC;&#xB97C; &#xD560; &#xC218;&#xB3C4; &#xC788;&#xC74C;</li>
+<li>ESI&#xB97C; &#xC0AC;&#xC6A9;&#xD558;&#xB824;&#xBA74; &#xBA3C;&#xC800; &#xC0AC;&#xC6A9; &#xC911;&#xC778; &#xC6F9; &#xCE90;&#xC2DC;&#xAC00; ESI &#xC5B8;&#xC5B4;&#xB97C; &#xC9C0;&#xC6D0;&#xD574;&#xC57C; &#xD568;</li>
+<li>&#xC0AC;&#xC6A9; &#xBC29;&#xC2DD;&#xC740; JSP&#xB098; ASP&#xC640; &#xBE44;&#xC2B7;&#xD55C;&#xB370; ESI &#xC5ED;&#xC2DC; &#xC77C;&#xC885;&#xC758; &#xD504;&#xB85C;&#xADF8;&#xB7A8; &#xC5B8;&#xC5B4;&#xB85C; HTML &#xBB38;&#xC11C; &#xB0B4;&#xC5D0;&#xC11C; &#xD504;&#xB85C;&#xADF8;&#xB7A8; &#xB85C;&#xC9C1;&#xC744; &#xAD6C;&#xD604;&#xD568;</li>
+<li>ESI&#xC5D0;&#xC11C; &#xC0AC;&#xC6A9;&#xB418;&#xB294; &#xB300;&#xD45C;&#xC801;&#xC778; &#xD0DC;&#xADF8;&#xB294; &#xB2E4;&#xC74C;&#xACFC; &#xAC19;&#xC74C;<ul>
+<li><code>&lt;include&gt;</code> &#xD0DC;&#xADF8;: &#xD604;&#xC7AC; &#xD398;&#xC774;&#xC9C0;&#xC758; &#xD604;&#xC7AC; &#xC704;&#xCE58;&#xC5D0; &#xD3EC;&#xD568;&#xC2DC;&#xD0A4;&#xACE0;&#xC790; &#xD558;&#xB294; &#xB9AC;&#xC18C;&#xC2A4;&#xB97C; &#xBA85;&#xC2DC;&#xD568;</li>
+<li><code>&lt;choose&gt;/&lt;when&gt;/&lt;otherwise&gt;</code> &#xD0DC;&#xADF8;: &#xC870;&#xAC74;&#xBD80; &#xB85C;&#xC9C1;</li>
+<li><code>&lt;try&gt;/&lt;attempt&gt;/&lt;except&gt;</code> &#xD0DC;&#xADF8;: &#xC608;&#xC678; &#xCC98;&#xB9AC; &#xAE30;&#xB2A5;&#xC744; &#xC81C;&#xACF5;&#xD568;</li>
+<li><code>&lt;remove&gt;</code> &#xD0DC;&#xADF8;: &#xC774; &#xD0DC;&#xADF8; &#xC548;&#xC758; &#xB0B4;&#xC6A9;&#xC740; ESI &#xCC98;&#xB9AC;&#xAE30;&#xAC00; &#xC81C;&#xAC70;&#xD558;&#xACE0; &#xB118;&#xC5B4;&#xAC00; &#xCD5C;&#xC885; HTML&#xC5D0;&#xB294; &#xBCF4;&#xC774;&#xC9C0; &#xC54A;&#xC74C;</li>
+</ul>
+</li>
+</ul>
+<p><br></p>
+<ul>
+<li>ESI&#xB294; &#xB2E4;&#xC74C;&#xACFC; &#xAC19;&#xC774; &#xB2E4;&#xC591;&#xD55C; &#xACBD;&#xC6B0;&#xC5D0; &#xC0AC;&#xC6A9;&#xD560; &#xC218; &#xC788;&#xC74C;</li>
+<li>&#xCCAB;&#xC9F8;, &#xD398;&#xC774;&#xC9C0; &#xB0B4;&#xC5D0; &#xC77C;&#xBD80; &#xB3D9;&#xC801;&#xC778; &#xBD80;&#xBD84;&#xC774; &#xC874;&#xC7AC;&#xD560; &#xB54C; &#xC774; &#xBD80;&#xBD84;&#xB9CC; &#xBCC4;&#xB3C4; &#xD398;&#xC774;&#xC9C0;&#xB85C; &#xB9CC;&#xB4E4;&#xC5B4; &#xBCF8;&#xB798; &#xD398;&#xC774;&#xC9C0;&#xC5D0; &#xB3D9;&#xC801;&#xC73C;&#xB85C; &#xC0BD;&#xC785;&#xD560; &#xC218; &#xC788;&#xC74C;<ul>
+<li>&#xB2E8; ESI&#xB294; Ajax&#xCC98;&#xB7FC; &#xC11C;&#xBC84;&#xB97C; &#xC8FC;&#xAE30;&#xC801;&#xC73C;&#xB85C; &#xD638;&#xCD9C;&#xD560; &#xC218; &#xC5C6;&#xC5B4; &#xC2E4;&#xC2DC;&#xAC04; &#xC8FC;&#xC2DD; &#xC2DC;&#xC138;&#xCC98;&#xB7FC; &#xC8FC;&#xAE30;&#xC801; &#xC5C5;&#xB370;&#xC774;&#xD2B8;&#xAC00; &#xD544;&#xC694;&#xD55C; &#xC6A9;&#xB3C4;&#xC5D0;&#xB294; &#xC801;&#xD569;&#xD558;&#xC9C0; &#xC54A;&#xC74C;</li>
+<li>&#xACFC;&#xB3C4;&#xD55C; &#xC5F0;&#xC0B0;&#xC774; &#xD544;&#xC694;&#xD55C; &#xD398;&#xC774;&#xC9C0;&#xC5D0;&#xB3C4; &#xC801;&#xD569;&#xD558;&#xC9C0; &#xC54A;&#xC74C;</li>
+</ul>
+</li>
+<li>&#xB458;&#xC9F8;, &#xC11C;&#xB85C; &#xB2E4;&#xB978; &#xC131;&#xACA9;&#xC758; &#xCF58;&#xD150;&#xCE20;&#xB97C; &#xAC01;&#xAC01;&#xC758; &#xCE90;&#xC2DC; &#xC815;&#xCC45;&#xC744; &#xC0AC;&#xC6A9;&#xD574; &#xCE90;&#xC2DC;&#xD558;&#xACE0;&#xC790; &#xD560; &#xB54C; &#xC720;&#xC6A9;&#xD568;</li>
+<li>&#xC14B;&#xC9F8;, &#xC0AC;&#xC6A9;&#xC790; &#xB4F1;&#xAE09;&#xC5D0; &#xB530;&#xB77C; &#xCF58;&#xD150;&#xCE20;&#xB97C; &#xC81C;&#xD55C;&#xD558;&#xACE0;&#xC790; &#xD560; &#xB54C; &#xC720;&#xC6A9;&#xD568;<ul>
+<li>&#xC774; &#xBC29;&#xC2DD;&#xC744; &#xC0AC;&#xC6A9;&#xD558;&#xB824;&#xBA74; &#xBCF4;&#xC548;&#xC744; &#xB354;&#xC6B1; &#xAD6C;&#xCCB4;&#xC801;&#xC73C;&#xB85C; &#xACE0;&#xB824;&#xD574;&#xC57C; &#xD568;</li>
+<li>&#xC0AC;&#xC6A9;&#xC790;&#xBCC4; &#xBCF4;&#xC548; &#xD1A0;&#xD070;&#xC744; &#xBC1C;&#xAE09;&#xD558;&#xACE0; &#xAC01; &#xD398;&#xC774;&#xC9C0; &#xD638;&#xCD9C; &#xC804; &#xC774; &#xD1A0;&#xD070; &#xAC80;&#xC99D; &#xB2E8;&#xACC4;&#xB97C; &#xCD94;&#xAC00;&#xD574; &#xC778;&#xAC00;&#xB418;&#xC9C0; &#xC54A;&#xC740; &#xC0AC;&#xC6A9;&#xC790;&#xAC00; &#xC720;&#xB8CC; &#xCF58;&#xD150;&#xCE20;&#xB97C; &#xC0AC;&#xC6A9;&#xD558;&#xB294; &#xC0AC;&#xB840;&#xB97C; &#xBC29;&#xC9C0; &#xD574;&#xC57C;&#xD568;</li>
+<li><code>&lt;try&gt;/&lt;attempt&gt;/&lt;except&gt;</code> &#xD0DC;&#xADF8;&#xB97C; &#xC0AC;&#xC6A9;&#xD574; &#xBE44;&#xC988;&#xB2C8;&#xC2A4; &#xB85C;&#xC9C1;&#xC744; &#xC791;&#xC131;&#xD560; &#xC218; &#xC788;&#xC74C;</li>
+</ul>
+</li>
+<li>&#xB137;&#xC9F8;, &#xC6F9; &#xC560;&#xD50C;&#xB9AC;&#xCF00;&#xC774;&#xC158; &#xAC1C;&#xBC1C;&#xC5D0; &#xD611;&#xC5C5;&#xC774; &#xD544;&#xC694;&#xD560; &#xB584; &#xC720;&#xC6A9;&#xD568;</li>
+</ul>
+<h4 id="html5-&#xB85C;&#xCEEC;-&#xC2A4;&#xD1A0;&#xB9AC;&#xC9C0;">HTML5 &#xB85C;&#xCEEC; &#xC2A4;&#xD1A0;&#xB9AC;&#xC9C0;</h4>
+<ul>
+<li>HTML5&#xC758; &#xD070; &#xC7A5;&#xC810; &#xC911; &#xD558;&#xB098;&#xB294; HTML5&#xB9CC;&#xC758; &#xB2E4;&#xC591;&#xD55C; &#xAE30;&#xB2A5;&#xC744; API&#xB97C; &#xD1B5;&#xD574; &#xC0AC;&#xC6A9;&#xD560; &#xC218; &#xC788;&#xAC8C; &#xD568;&#xC73C;&#xB85C;&#xC368; &#xC6F9; &#xD398;&#xC774;&#xC9C0; &#xC790;&#xCCB4;&#xAC00; &#xC77C;&#xC885;&#xC758; &#xC6F9;/&#xBAA8;&#xBC14;&#xC77C; &#xC560;&#xD50C;&#xB9AC;&#xCF00;&#xC774;&#xC158;&#xC73C;&#xB85C; &#xAD6C;&#xB3D9;&#xB420; &#xC218; &#xC788;&#xB2E4;&#xB294; &#xAC83;&#xC784;</li>
+<li>HTML5&#xC758; &#xC8FC;&#xC694; &#xAE30;&#xB2A5; &#xC911; &#xC6F9; &#xC2A4;&#xD1A0;&#xB9AC;&#xC9C0; API &#xAE30;&#xB2A5;&#xC744; &#xC8FC;&#xC694;&#xD558;&#xAC8C; &#xC0B4;&#xD3B4;&#xBD10;&#xC57C; &#xD568;</li>
+<li>&#xC774; &#xAE30;&#xB2A5;&#xC744; &#xC0AC;&#xC6A9;&#xD558;&#xBA74; &#xC0AC;&#xC6A9;&#xC790;&#xC758; &#xC8FC;&#xC694; &#xC815;&#xBCF4;&#xB4E4;&#xC774;&#xB098; &#xC6F9; &#xB9AC;&#xC18C;&#xC2A4;&#xB4E4;&#xC744; &#xBE0C;&#xB77C;&#xC6B0;&#xC800; &#xB85C;&#xCEEC; &#xC800;&#xC7A5;&#xC18C;&#xC5D0; &#xC800;&#xC7A5;&#xD558;&#xC5EC; &#xC7AC;&#xC0AC;&#xC6A9;&#xD560; &#xC218; &#xC788;&#xC74C;</li>
+<li>&#xAE30;&#xC874;&#xC5D0;&#xB294; &#xCFE0;&#xD0A4;&#xB97C; &#xD1B5;&#xD574;&#xC11C;&#xB9CC; &#xC0AC;&#xC6A9;&#xC790; &#xC815;&#xBCF4;&#xB97C; &#xC800;&#xC7A5;&#xD588;&#xC9C0;&#xB9CC;, &#xCD5C;&#xC18C; 5MB &#xD06C;&#xAE30;&#xC758; &#xC6F9; &#xC2A4;&#xD1A0;&#xB9AC;&#xC9C0; API&#xB97C; &#xD1B5;&#xD574; &#xB354; &#xB9CE;&#xC740; &#xB370;&#xC774;&#xD130;&#xB97C; &#xC548;&#xC804;&#xD558;&#xAC8C; &#xC800;&#xC7A5;&#xD560; &#xC218; &#xC788;&#xC74C;</li>
+<li>&#xC2A4;&#xD1A0;&#xB9AC;&#xC9C0;&#xB294; &#xC138;&#xC158;&#xC774; &#xC0B4;&#xC544; &#xC788;&#xB294; &#xB3D9;&#xC548;&#xC5D0;&#xB9CC; &#xC800;&#xC7A5;&#xB418;&#xB294; &#xC138;&#xC158; &#xC2A4;&#xD1A0;&#xB9AC;&#xC9C0;&#xC640; &#xC601;&#xC6D0;&#xD788; &#xC800;&#xC7A5;&#xB418;&#xB294; &#xB85C;&#xCEEC; &#xC2A4;&#xD1A0;&#xB9AC;&#xC9C0;&#xAC00; &#xC788;&#xC74C;</li>
+<li>IndexedDB&#xB294; &#xC624;&#xBE0C;&#xC81D;&#xD2B8; &#xC2A4;&#xD1A0;&#xC5B4;&#xB85C;&#xC368; &#xB354; &#xAD11;&#xBC94;&#xC704;&#xD55C; &#xB370;&#xC774;&#xD130;&#xB97C; &#xC800;&#xC7A5;&#xD560; &#xB54C; &#xC0AC;&#xC6A9;&#xD568;</li>
+<li>&#xCFE0;&#xD0A4;&#xB294; &#xB9E4;&#xBC88; &#xB124;&#xD2B8;&#xC6CC;&#xD06C;&#xB97C; &#xD1B5;&#xD574; &#xC804;&#xB2EC;&#xB418;&#xC5B4; &#xBCF4;&#xC548;&#xC5D0; &#xCDE8;&#xC57D;&#xD558;&#xC9C0;&#xB9CC;, &#xC6F9; &#xC2A4;&#xD1A0;&#xB9AC;&#xC9C0;&#xB97C; &#xC0AC;&#xC6A9;&#xD560; &#xACBD;&#xC6B0; &#xB370;&#xC774;&#xD130;&#xAC00; &#xD55C; &#xBC88; &#xC800;&#xC7A5;&#xB418;&#xBA74; &#xC138;&#xC158; &#xC8FC;&#xAE30; &#xB0B4;&#xC5D0; &#xB610;&#xB294; &#xB9CC;&#xB8CC; &#xC5C6;&#xC774; &#xB85C;&#xCEEC; &#xC2A4;&#xD1A0;&#xB9AC;&#xC9C0;&#xC5D0;&#xC11C; &#xC5BC;&#xB9C8;&#xB4E0; &#xBD88;&#xB7EC; &#xC4F8; &#xC218; &#xC788;&#xC5B4; &#xBCF4;&#xC548;&#xC0C1; &#xB354; &#xC548;&#xC804;&#xD568;</li>
+<li>&#xB610;&#xD55C; 4kb &#xC774;&#xB0B4;&#xC758; &#xC81C;&#xD55C;&#xC778; &#xCFE0;&#xD0A4; &#xB300;&#xBE44; &#xD6E8;&#xC52C; &#xB9CE;&#xC740; 5MB&#xC758; &#xC6A9;&#xB7C9; &#xC81C;&#xD55C;&#xC73C;&#xB85C;, &#xC0AC;&#xC6A9;&#xC790; &#xB370;&#xC774;&#xD130;&#xB97C; &#xC800;&#xC7A5;&#xD560; &#xC218; &#xC788;&#xC74C;</li>
+<li>&#xC6D0;&#xD558;&#xB294; &#xB54C;&#xC5D0; &#xD544;&#xC694;&#xD55C; &#xB370;&#xC774;&#xD130;&#xB9CC; &#xC870;&#xD68C;&#xD558;&#xC5EC; &#xC4F8; &#xC218; &#xC788;&#xC5B4; &#xBD88;&#xD544;&#xC694;&#xD55C; &#xC694;&#xCCAD;&#xC774; &#xC904;&#xACE0; &#xD398;&#xC774;&#xC9C0; &#xB85C;&#xB529;&#xC774; &#xBE68;&#xB77C;&#xC9C0;&#xBA70; &#xB124;&#xD2B8;&#xC6CC;&#xD06C; &#xB300;&#xC5ED;&#xD3ED;&#xB3C4; &#xC808;&#xAC10;&#xD560; &#xC218; &#xC788;&#xC74C;</li>
+<li>&#xC6F9; &#xC2A4;&#xD1A0;&#xB9AC;&#xC9C0;&#xB294; &#xC6F9; &#xC0AC;&#xC774;&#xD2B8;&#xC758; &#xC911;&#xC694;&#xD55C; &#xB9AC;&#xC18C;&#xC2A4;&#xB97C; &#xC800;&#xC7A5;&#xD558;&#xB294;&#xB370; &#xC0AC;&#xC6A9;&#xD560; &#xC218; &#xC788;&#xC74C;</li>
+<li>&#xB80C;&#xB354;&#xB9C1;&#xC5D0; &#xC788;&#xC5B4; &#xC911;&#xC694;&#xD55C; CSS, &#xC790;&#xBC14;&#xC2A4;&#xD06C;&#xB9BD;&#xD2B8;, &#xD3F0;&#xD2B8; &#xD30C;&#xC77C; &#xB4F1;&#xC744; &#xC800;&#xC7A5;&#xD574;&#xB193;&#xC73C;&#xBA74; &#xB098;&#xC911;&#xC5D0; &#xC0AC;&#xC6A9;&#xC790;&#xAC00; &#xC7AC;&#xBC29;&#xBB38;&#xD560; &#xB54C; &#xB85C;&#xB529; &#xC18D;&#xB3C4;&#xB97C; &#xB300;&#xD3ED; &#xAC1C;&#xC120;&#xD560; &#xC218; &#xC788;&#xC74C;</li>
+</ul>
+<h1 id="&#x1F4AD;-insights">&#x1F4AD; Insights</h1>
+<h3 id="post-&#xC694;&#xCCAD;&#xC774;-get-&#xC694;&#xCCAD;&#xBCF4;&#xB2E4;-&#xBCF4;&#xC548;&#xC801;-&#xCE21;&#xBA74;&#xC5D0;&#xC11C;-&#xC0C1;&#xB300;&#xC801;&#xC73C;&#xB85C;-&#xC548;&#xC804;&#xD558;&#xB2E4;">POST &#xC694;&#xCCAD;&#xC774; GET &#xC694;&#xCCAD;&#xBCF4;&#xB2E4; &#xBCF4;&#xC548;&#xC801; &#xCE21;&#xBA74;&#xC5D0;&#xC11C; &#xC0C1;&#xB300;&#xC801;&#xC73C;&#xB85C; &#xC548;&#xC804;&#xD558;&#xB2E4;</h3>
+<ul>
+<li>&#xAC1C;&#xBC1C;&#xC790; &#xB3C4;&#xAD6C;&#xC758; &#xB124;&#xD2B8;&#xC6CC;&#xD06C; &#xD0ED;&#xC744; &#xBCF4;&#xBA74; POST &#xC694;&#xCCAD;&#xC758; &#xCFFC;&#xB9AC; &#xC2A4;&#xD2B8;&#xB9C1;&#xC744; &#xBCFC; &#xC218; &#xC788;&#xB2E4;</li>
+<li>URL&#xC5D0;&#xC11C;&#xB9CC; &#xAC10;&#xCDB0;&#xC84C;&#xC744; &#xBFD0; &#xC544;&#xC608; &#xAC10;&#xCDB0;&#xC9C4; &#xAC83;&#xC774; &#xC544;&#xB2CC;&#xB370; &#xC774;&#xC815;&#xB3C4;&#xB9CC;&#xC73C;&#xB85C;&#xB3C4; &#xBCF4;&#xC548;&#xC801;&#xC73C;&#xB85C; &#xB354; &#xB098;&#xC544;&#xC84C;&#xB2E4;&#xACE0; &#xBCFC; &#xC218; &#xC788;&#xC744;&#xAE4C;?</li>
+<li>URL&#xC740; &#xBE0C;&#xB77C;&#xC6B0;&#xC800; &#xD788;&#xC2A4;&#xD1A0;&#xB9AC;&#xB098; &#xC11C;&#xBC84; &#xB85C;&#xADF8;&#xC5D0; &#xB0A8;&#xC744; &#xC218; &#xC788;&#xB2E4;.</li>
+<li>&#xB530;&#xB77C;&#xC11C; URL&#xC5D0; &#xC815;&#xBCF4;&#xAC00; &#xC788;&#xC73C;&#xBA74; &#xB2E4;&#xB978; &#xC0AC;&#xB78C;&#xC5D0;&#xAC8C; &#xBCF4;&#xC5EC;&#xC9C8; &#xAC00;&#xB2A5;&#xC131;&#xC774; &#xB192;&#xB2E4;.</li>
+<li>&#xB610;&#xD55C; &#xB9AC;&#xD37C;&#xB7EC;(referrer) &#xD5E4;&#xB354;&#xC5D0; URL&#xC774; &#xB2F4;&#xAE30;&#xBBC0;&#xB85C; POST&#xAC00; &#xBCF4;&#xC548;&#xC801;&#xC73C;&#xB85C; &#xC644;&#xC804;&#xD788; &#xC548;&#xC804;&#xD55C; &#xAC83;&#xC740; &#xC544;&#xB2C8;&#xB354;&#xB77C;&#xB3C4; &#xC911;&#xC694;&#xD55C; &#xC815;&#xBCF4;&#xB97C; URL&#xC5D0; &#xB2F4;&#xB294; &#xAC83;&#xC740; &#xBC18;&#xB4DC;&#xC2DC; &#xD53C;&#xD574;&#xC57C; &#xD55C;&#xB2E4;.</li>
+<li>&#xB9AC;&#xD37C;&#xB7EC; &#xD5E4;&#xB354;&#xB294; &#xB9C1;&#xD06C;&#xB97C; &#xD074;&#xB9AD; &#xD588;&#xC744; &#xB54C; &#xC774;&#xC804; &#xD398;&#xC774;&#xC9C0;&#xC758; URL&#xC744; &#xD3EC;&#xD568;&#xD55C;&#xB2E4;.</li>
+<li>&#xB530;&#xB77C;&#xC11C; &#xC6F9; &#xC0AC;&#xC774;&#xD2B8; &#xC18C;&#xC720;&#xC790;&#xB294; &#xC774; &#xC815;&#xBCF4;&#xB97C; &#xD1B5;&#xD574; &#xBC29;&#xBB38;&#xC790;&#xAC00; &#xC5B4;&#xB5A4; &#xB9C1;&#xD06C;&#xC5D0;&#xC11C; &#xC654;&#xB294;&#xC9C0; &#xC54C; &#xC218; &#xC788;&#xB2E4;.</li>
+</ul>
+<h3 id="&#xCFE0;&#xD0A4;&#xC640;-&#xB85C;&#xCEEC;-&#xC2A4;&#xD1A0;&#xB9AC;&#xC9C0;&#xC758;-&#xBCF4;&#xC548;">&#xCFE0;&#xD0A4;&#xC640; &#xB85C;&#xCEEC; &#xC2A4;&#xD1A0;&#xB9AC;&#xC9C0;&#xC758; &#xBCF4;&#xC548;</h3>
+<ul>
+<li>&#xCC45;&#xC5D0;&#xC11C;&#xB294; &#xCFE0;&#xD0A4;&#xC5D0; &#xC0AC;&#xC6A9;&#xC790; &#xC815;&#xBCF4;&#xB97C; &#xCD94;&#xAC00;&#xD558;&#xBA74; &#xB9E4;&#xBC88; &#xB124;&#xD2B8;&#xC6CC;&#xD06C;&#xB97C; &#xD1B5;&#xD574; &#xC804;&#xB2EC;&#xB418;&#xC5B4; &#xBCF4;&#xC548;&#xC5D0; &#xCDE8;&#xC57D;&#xD558;&#xB2E4;&#xACE0; &#xD55C;&#xB2E4;.</li>
+<li>&#xADF8;&#xB798;&#xC11C; &#xB85C;&#xCEEC; &#xC2A4;&#xD1A0;&#xB9AC;&#xC9C0;&#xAC00; &#xBCF4;&#xC548;&#xC0C1; &#xB354; &#xC548;&#xC804;&#xD558;&#xB2E4;&#xACE0; &#xD558;&#xB294;&#xB370;, &#xB85C;&#xCEEC; &#xC2A4;&#xD1A0;&#xB9AC;&#xC9C0;&#xAC00; &#xCFE0;&#xD0A4;&#xBCF4;&#xB2E4; &#xBCF4;&#xC548;&#xC801;&#xC73C;&#xB85C; &#xC548;&#xC804;&#xD55C;&#xAC8C; &#xB9DE;&#xC744;&#xAE4C;?</li>
+</ul>
+<p><br></p>
+<ul>
+<li>&#xC77C;&#xB2E8; &#xCFE0;&#xD0A4;&#xB294; CSRF(Cross-Site Request Forgery) &#xACF5;&#xACA9;&#xC5D0; &#xCDE8;&#xC57D;&#xD558;&#xB2E4;.</li>
+<li>CSRF&#xB780; &#xB85C;&#xADF8;&#xC778;&#xC774; &#xB41C; &#xC0C1;&#xD0DC;&#xC5D0;&#xC11C; &#xCFE0;&#xD0A4;&#xC5D0; &#xC0AC;&#xC6A9;&#xC790; &#xC815;&#xBCF4;&#xAC00; &#xC788;&#xC744; &#xB54C;, &#xC545;&#xC131; &#xB9C1;&#xD06C;&#xB97C; &#xC811;&#xC18D;&#xD558;&#xAC8C; &#xD558;&#xBA74; &#xC774; &#xB9C1;&#xD06C;&#xC5D0;&#xC11C; &#xCFE0;&#xD0A4;&#xC5D0; &#xC788;&#xB294; &#xC0AC;&#xC6A9;&#xC790; &#xC815;&#xBCF4;&#xB97C; &#xC774;&#xC6A9;&#xD574; &#xC815;&#xC0C1; &#xC0AC;&#xC6A9;&#xC790;&#xC778;&#xCC99; &#xC545;&#xC131; &#xC694;&#xCCAD;&#xC744; &#xBCF4;&#xB0B4;&#xB294; &#xAC83;&#xC774;&#xB2E4;.</li>
+<li>&#xC545;&#xC131; &#xB9C1;&#xD06C;&#xC5D0; &#xC811;&#xC18D;&#xD560; &#xB54C;&#xB3C4; &#xCFE0;&#xD0A4;&#xAC00; &#xC804;&#xB2EC;&#xB418;&#xAE30; &#xB54C;&#xBB38;&#xC5D0; &#xBC1C;&#xC0DD;&#xD558;&#xB294; &#xBB38;&#xC81C;&#xC774;&#xB2E4;.</li>
+</ul>
+<p><br></p>
+<ul>
+<li>&#xB85C;&#xCEEC; &#xC2A4;&#xD1A0;&#xB9AC;&#xC9C0;&#xB294; &#xB9E4;&#xBC88; &#xB124;&#xD2B8;&#xC6CC;&#xD06C;&#xB97C; &#xD1B5;&#xD574; &#xC804;&#xB2EC;&#xB418;&#xB294; &#xAC83;&#xC774; &#xC544;&#xB2C8;&#xAE30; &#xB584;&#xBB38;&#xC5D0; CSRF &#xACF5;&#xACA9;&#xC5D0;&#xB294; &#xC548;&#xC804;&#xD558;&#xB2E4;.</li>
+<li>&#xD558;&#xC9C0;&#xB9CC; XSS &#xACF5;&#xACA9;&#xC744; &#xBC1B;&#xC744; &#xC218; &#xC788;&#xB2E4;.</li>
+<li>XSS&#xB780; &#xACF5;&#xACA9;&#xC790;&#xAC00; &#xC545;&#xC131; &#xC2A4;&#xD06C;&#xB9BD;&#xD2B8; &#xD30C;&#xC77C;&#xC744; &#xC0BD;&#xC785;&#xD574; &#xC0AC;&#xC6A9;&#xC790;&#xB294; &#xC0BD;&#xC785;&#xB41C; &#xCF54;&#xB4DC;&#xB97C; &#xC2E4;&#xD589;&#xD558;&#xAC8C; &#xD574;&#xC11C; &#xC758;&#xB3C4;&#xCE58; &#xC54A;&#xC740; &#xD589;&#xB3D9;&#xC744; &#xC218;&#xD589;&#xC2DC;&#xD0A4;&#xB294; &#xACF5;&#xACA9;&#xC774;&#xB2E4;.</li>
+<li>&#xC774;&#xB97C; &#xD1B5;&#xD574; &#xB85C;&#xCEEC; &#xC2A4;&#xD1A0;&#xB9AC;&#xC9C0;&#xC5D0; &#xC815;&#xBCF4;&#xAC00; &#xB178;&#xCD9C; &#xB420; &#xC218; &#xC788;&#xB2E4;.</li>
+<li>&#xCFE0;&#xD0A4; &#xB610;&#xD55C; XSS &#xACF5;&#xACA9;&#xC5D0; &#xB178;&#xCD9C;&#xB420; &#xC218; &#xC788;&#xC9C0;&#xB9CC; httpOnly &#xC635;&#xC158;&#xC774; &#xC124;&#xC815;&#xB418;&#xBA74; &#xC790;&#xBC14;&#xC2A4;&#xD06C;&#xB9BD;&#xD2B8;&#xC5D0;&#xC11C; &#xC811;&#xADFC;&#xC774; &#xBD88;&#xAC00;&#xB2A5;&#xD558;&#xAC8C; &#xB41C;&#xB2E4;.</li>
+</ul>
+<p><br></p>
+<ul>
+<li>&#xCC45;&#xC5D0;&#xC11C;&#xB294; &#xB85C;&#xCEEC; &#xC2A4;&#xD1A0;&#xB9AC;&#xC9C0;&#xB97C; &#xC774;&#xC6A9;&#xD558;&#xB294; &#xAC83;&#xC774; &#xBCF4;&#xC548;&#xC0C1; &#xB354; &#xC548;&#xC804;&#xD558;&#xB2E4;&#xACE0; &#xD558;&#xC9C0;&#xB9CC;, XSS &#xACF5;&#xACA9;&#xC744; &#xC0DD;&#xAC01;&#xD558;&#xBA74; &#xB85C;&#xCEEC; &#xC2A4;&#xD1A0;&#xB9AC;&#xC9C0; &#xB610;&#xD55C; &#xC548;&#xC804;&#xD558;&#xC9C0; &#xC54A;&#xB2E4;.</li>
+<li>&#xB530;&#xB77C;&#xC11C; &#xC6F9; &#xC131;&#xB2A5; &#xCE21;&#xBA74;&#xC5D0;&#xC11C;&#xB294; &#xB85C;&#xCEEC; &#xC2A4;&#xD1A0;&#xB9AC;&#xC9C0;&#xB97C; &#xC0AC;&#xC6A9;&#xD558;&#xB294; &#xAC83;&#xC774; &#xB098;&#xC744; &#xC218; &#xC788;&#xC9C0;&#xB9CC;,</li>
+<li>&#xBCF4;&#xC548;&#xC801;&#xC73C;&#xB85C; &#xB354; &#xC548;&#xC804;&#xD55C; &#xAC83;&#xC740; &#xC5C6;&#xACE0; &#xB458; &#xB2E4; &#xBCF4;&#xC548;&#xC5D0; &#xC2E0;&#xACBD;&#xC368;&#xC11C; &#xC798; &#xC0AC;&#xC6A9;&#xD574;&#xC57C; &#xD55C;&#xB2E4;&#xACE0; &#xC0DD;&#xAC01;&#xD55C;&#xB2E4;.</li>
+</ul>
+<p><br></p>
+<ul>
+<li>JWT&#xB97C; &#xC774;&#xC6A9;&#xD55C; &#xB85C;&#xADF8;&#xC778; &#xC778;&#xC99D;/&#xC778;&#xAC00; &#xAD6C;&#xD604;&#xB54C;&#xB3C4; &#xC774;&#xC5D0; &#xB300;&#xD574; &#xB9CE;&#xC774; &#xACE0;&#xBBFC;&#xD558;&#xACE0; &#xCC3E;&#xC544;&#xBD24;&#xB2E4;.</li>
+<li>access token&#xACFC; refresh token&#xC744; &#xCFE0;&#xD0A4;&#xC5D0; &#xB2F4;&#xAC70;&#xB098;, &#xB85C;&#xCEEC; &#xC2A4;&#xD1A0;&#xB9AC;&#xC9C0;&#xC5D0; &#xB2F4;&#xB294; &#xAC83; &#xBAA8;&#xB450; &#xBB38;&#xC81C;&#xC810;&#xC774; &#xC788;&#xC5B4; &#xC120;&#xD0DD;&#xC744; &#xD574;&#xC57C; &#xD588;&#xB2E4;.</li>
+<li>&#xC774; &#xB54C; refresh token&#xC744; &#xCFE0;&#xD0A4;&#xC5D0; &#xC800;&#xC7A5;&#xD558;&#xACE0; access token&#xC744; &#xB85C;&#xCEEC; &#xC2A4;&#xD1A0;&#xB9AC;&#xC9C0;&#xC5D0; &#xC800;&#xC7A5;&#xD55C;&#xB2E4;&#xBA74;,</li>
+<li>CSRF&#xC5D0;&#xC11C; &#xCFE0;&#xD0A4;&#xAC00; &#xC804;&#xB2EC;&#xB418;&#xC5B4;&#xB3C4; refresh token&#xB9CC; &#xC804;&#xB2EC;&#xB418;&#xBBC0;&#xB85C; &#xBE44;&#xAD50;&#xC801; &#xC548;&#xC804;&#xD574;&#xC9C4;&#xB2E4;.</li>
+<li>&#xB610;&#xD55C; XSS &#xACF5;&#xACA9;&#xC73C;&#xB85C; access token&#xC774; &#xD0C8;&#xCDE8;&#xB41C;&#xB2E4; &#xD574;&#xB3C4;, access token&#xC740; &#xB9CC;&#xB8CC; &#xAE30;&#xAC04;&#xC774; &#xC9E7;&#xAE30; &#xB54C;&#xBB38;&#xC5D0; &#xBE44;&#xAD50;&#xC801; &#xC548;&#xC804;&#xD574;&#xC9C4;&#xB2E4;.</li>
+<li>&#xB530;&#xB77C;&#xC11C; refresh token&#xC740; &#xCFE0;&#xD0A4;&#xC5D0;, access token&#xC740; &#xB85C;&#xCEEC; &#xC2A4;&#xD1A0;&#xB9AC;&#xC9C0;&#xC5D0; &#xC800;&#xC7A5;&#xD558;&#xB294; &#xBC29;&#xBC95;&#xC744; &#xC120;&#xD0DD;&#xD588;&#xB2E4;.</li>
+</ul>
 
                                 
                                 </section>
@@ -702,7 +1110,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"06. 캐시 최적화","level":"1.4.6","depth":2,"next":{"title":"07. CDN","level":"1.4.7","depth":2,"path":"웹 성능 최적화 기법/07. CDN.md","ref":"웹 성능 최적화 기법/07. CDN.md","articles":[]},"previous":{"title":"05. 웹에서 가속을 이끌어 내는 방법","level":"1.4.5","depth":2,"path":"웹 성능 최적화 기법/05. 웹에서 가속을 이끌어 내는 방법.md","ref":"웹 성능 최적화 기법/05. 웹에서 가속을 이끌어 내는 방법.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["hide-published-with","collapsible-chapters","intopic-toc","bootstrap-callout"],"pluginsConfig":{"intopic-toc":{"isCollapsed":true,"isScrollspyActive":true,"label":"목차","maxDepth":6,"mode":"nested","selector":".markdown-section h1, .markdown-section h2, .markdown-section h3, .markdown-section h4, .markdown-section h5, .markdown-section h6","visible":true},"search":{},"collapsible-chapters":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"hide-published-with":{},"bootstrap-callout":{},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"웹 성능 최적화 기법/06. 캐시 최적화.md","mtime":"2024-12-18T13:13:45.537Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2024-12-18T13:14:33.939Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"06. 캐시 최적화","level":"1.4.6","depth":2,"next":{"title":"07. CDN","level":"1.4.7","depth":2,"path":"웹 성능 최적화 기법/07. CDN.md","ref":"웹 성능 최적화 기법/07. CDN.md","articles":[]},"previous":{"title":"05. 웹에서 가속을 이끌어 내는 방법","level":"1.4.5","depth":2,"path":"웹 성능 최적화 기법/05. 웹에서 가속을 이끌어 내는 방법.md","ref":"웹 성능 최적화 기법/05. 웹에서 가속을 이끌어 내는 방법.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["hide-published-with","collapsible-chapters","intopic-toc","bootstrap-callout"],"pluginsConfig":{"intopic-toc":{"isCollapsed":true,"isScrollspyActive":true,"label":"목차","maxDepth":6,"mode":"nested","selector":".markdown-section h1, .markdown-section h2, .markdown-section h3, .markdown-section h4, .markdown-section h5, .markdown-section h6","visible":true},"search":{},"collapsible-chapters":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"hide-published-with":{},"bootstrap-callout":{},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css","website":"styles/website.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css","website":"styles/website.css"}},"file":{"path":"웹 성능 최적화 기법/06. 캐시 최적화.md","mtime":"2024-12-30T10:23:35.817Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2024-12-30T10:24:22.129Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
